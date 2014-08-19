@@ -1,0 +1,31 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+div.tab {
+	display: inline-block;
+	width : 200px;
+	height : 300px;
+	position : absolute;
+	top: 20px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;	
+	text-align:center;
+}
+#history {
+	left: 10px;	
+}
+#controlPanel {
+	left: 210px;	
+}
+#hisghScore {
+	left: 410px;	
+}
+div span,input{
+	display:block;	
+	margin:0 auto;
+	text-align: center;
+}
+ul  {
+	list-style-type: none;
+}
