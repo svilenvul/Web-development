@@ -1,0 +1,61 @@
+header, nav, section, article, aside, footer {
+display:block;
+}
+body 	{
+background-color:#eee;
+width:600px;
+font-size:13px;
+}
+section>img 	{
+width:150px;
+height:100px;
+float:left;
+border:1px solid #aaa;
+margin-right:15px;
+}
+section	{
+border:1px solid #aaa;
+width:350px;
+height:100px;
+padding:15px;
+padding-right:50px;
+margin:40px 5px;
+background-color:#FFF;
+}
+p	{
+display:block;
+position:relative;
+top:-15px;
+}
+h1 	{
+font-size:20px;
+font-family:Calibri;
+font-weight:100;
+}
+
+a	{
+background-image:url("http://geothermalprosandcons.net/blog/wp-content/plugins/secure-wordpress/img/agent-red.png");
+background-size:90px 35px;
+background-position:center; 
+display:inline-block;
+width:80px;
+border-color:rgb(189, 94, 94);
+border-style:outset;
+color:white;
+text-align:center;
+padding:3px;
+text-decoration:none;
+position:relative;
+top:-45px;
+right:-200px;
+}
+.clearfix 	{
+zoom:1;
+}
+.clearfix :after	{
+content:"";
+display:block;
+clear:both;
+height:1;
+}
+

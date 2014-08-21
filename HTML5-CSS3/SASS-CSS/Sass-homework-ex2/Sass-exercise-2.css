@@ -1,0 +1,18 @@
+body ul li {
+  list-style-type: none;
+  display: inline-block; }
+  body ul li input {
+    display: none; }
+  body ul li input:checked + label img:last-of-type {
+    display: block; }
+  body ul li img:first-of-type {
+    height: 200px;
+    width: 200px; }
+  body ul li img:last-of-type {
+    display: none;
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    height: 600px;
+    width: 600px; }
+

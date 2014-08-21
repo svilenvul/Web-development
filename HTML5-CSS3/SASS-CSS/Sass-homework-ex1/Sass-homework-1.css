@@ -1,0 +1,184 @@
+body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
+  display: block; }
+
+body {
+  font: 12px normal arial;
+  color: #ffffaa;
+  background: #b25dc1;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #b25dc1 0%, #c37fd2 7%, #6e2ac1 32%, #6e2ac1 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b25dc1), color-stop(7%, #c37fd2), color-stop(32%, #6e2ac1), color-stop(100%, #6e2ac1));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #b25dc1 0%, #c37fd2 7%, #6e2ac1 32%, #6e2ac1 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #b25dc1 0%, #c37fd2 7%, #6e2ac1 32%, #6e2ac1 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #b25dc1 0%, #c37fd2 7%, #6e2ac1 32%, #6e2ac1 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #b25dc1 0%, #c37fd2 7%, #6e2ac1 32%, #6e2ac1 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-1', endColorstr='$color-3',GradientType=0 );
+  /* IE6-9 */ }
+  body header {
+    padding-top: 25px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px; }
+    body header #reg-form-container {
+      float: right;
+      position: relative;
+      right: 5%;
+      top: -100px; }
+      body header #reg-form-container div {
+        text-align: right; }
+        body header #reg-form-container div label {
+          width: 50px;
+          margin: 5px; }
+        body header #reg-form-container div input {
+          width: 130px;
+          border-radius: 10px;
+          border: 1px solid #190028;
+          padding: 2px 5px;
+          margin: 5px;
+          background-color: #b25dc1; }
+      body header #reg-form-container button {
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        border-style: outset;
+        padding: 5px 8px;
+        color: #ffffaa;
+        background-color: transparent;
+        boder-style: outset;
+        border-radius: 10px;
+        border: 1px solid #190028;
+        font: 12px normal arial; }
+        body header #reg-form-container button:hover {
+          background-color: #8949b9;
+          border-style: inset; }
+    body header nav {
+      display: inline-block;
+      width: 75%;
+      margin: 20px 20px 20px 20px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #190028; }
+      body header nav ul {
+        list-style-type: none; }
+        body header nav ul li {
+          float: left;
+          margin: 0; }
+          body header nav ul li.selected > a {
+            font-weight: bold; }
+          body header nav ul li:hover > a {
+            text-decoration: underline;
+            color: #a8a8a8; }
+          body header nav ul li a {
+            text-decoration: none;
+            padding: 0 10px 0 10px;
+            color: #ffffaa;
+            font: 1.4em normal; }
+          body header nav ul li ul.sub-nav-list {
+            position: absolute;
+            display: none;
+            background-color: rgba(179, 94, 243, 0.9); }
+          body header nav ul li:hover > a + ul {
+            display: block; }
+          body header nav ul li ul li {
+            float: none;
+            margin: 0 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid black; }
+            body header nav ul li ul li:last-of-type {
+              border-bottom: none; }
+            body header nav ul li ul li a {
+              font-size: 1.2em;
+              color: #ffffaa; }
+  body section {
+    width: 75%;
+    float: left; }
+    body section article {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #190028; }
+      body section article header {
+        background: none;
+        padding: 5px; }
+        body section article header h1 {
+          font-size: 1.4em;
+          padding: 0; }
+    body section footer {
+      padding: 5px; }
+      body section footer p {
+        text-align: right;
+        font-weight: normal; }
+        body section footer p time {
+          font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace; }
+        body section footer p a {
+          text-decoration: none;
+          color: #b25dc1; }
+          body section footer p a:hover {
+            text-decoration: underline; }
+  body aside {
+    float: left;
+    width: 20%;
+    margin: 20px; }
+    body aside > ul {
+      list-style-type: none; }
+      body aside > ul > li {
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #190028; }
+        body aside > ul > li h2 {
+          font-size: 1.1em;
+          font-weight: bold; }
+        body aside > ul > li p {
+          margin-top: 10px;
+          margin-right: 5px;
+          margin-bottom: 10px;
+          margin-left: 5px; }
+          body aside > ul > li p a {
+            color: #ffe5ff;
+            text-decoration: none; }
+          body aside > ul > li p strong {
+            color: #fff6ff;
+            font-weight: bold;
+            font-style: normal; }
+          body aside > ul > li p em {
+            color: white;
+            font-weight: normal;
+            font-style: italic; }
+        body aside > ul > li ul {
+          list-style-type: none;
+          margin-top: 10px;
+          margin-right: 0;
+          margin-bottom: 10px;
+          margin-left: 0px; }
+          body aside > ul > li ul li {
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+            margin-right: 0px;
+            background: url(images/li-dot.png) no-repeat;
+            background-position: 0 50%;
+            padding-left: 25px; }
+  body footer {
+    clear: both;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-align: center; }
+    body footer p {
+      font-size: 1.2em;
+      font-weight: bold; }
+
+/*# sourceMappingURL=Scss1.css.map */

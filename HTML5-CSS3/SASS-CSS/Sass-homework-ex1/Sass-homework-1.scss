@@ -1,0 +1,258 @@
+$color-1:#b25dc1;	
+$color-2:$color-1 + #112211;
+$color-3:$color-2 - #555511;
+$stop-1-2:7%;
+$stop-2-3:32%;
+
+$color-text: #ffffaa;
+$color-link-aside:$color-1 +#888888;
+$color-strong-aside:$color-1 +#999999;
+$color-em-aside:$color-1 + #aaaaaa;
+
+@mixin background		{
+	background: #b25dc1; /* Old browsers */
+	background: -moz-linear-gradient(top,  $color-1 0%, $color-2 $stop-1-2, $color-3 $stop-2-3, $color-3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color-1), color-stop($stop-1-2,$color-2), color-stop($stop-2-3,$color-3), color-stop(100%,$color-3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  $color-1 0%,$color-2 $stop-1-2,$color-3 $stop-2-3,$color-3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  $color-1 0%,$color-2 $stop-1-2,$color-3 $stop-2-3,$color-3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  $color-1 0%,$color-2 $stop-1-2,$color-3 $stop-2-3,$color-3 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  $color-1 0%,$color-2 $stop-1-2,$color-3 $stop-2-3,$color-3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-1', endColorstr='$color-3',GradientType=0 ); /* IE6-9 */
+}
+@mixin border {
+	border-radius: 10px;
+	border: 1px solid $color-1 - #999999;
+}
+@mixin text {
+	font:12px normal arial;
+	}
+
+body, header, section, footer, article, h1, h2, h3, h4, h5, h6, input, button, label, p, fieldset, nav, ul, li, a, span, strong, em {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div, h1, h3, h4, h5, h6, header, footer, body, section, nav, article, aside {
+    display: block;
+}
+body{
+	@include text;
+    color: $color-text;
+	@include background;	 
+	
+	header {
+		padding-top: 25px;
+        padding-bottom: 5px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+		#reg-form-container	{
+			float:right;
+			position: relative;
+			right: 5%;
+			top:-100px;
+
+			div {
+				text-align: right;
+
+				label {
+					width: 50px;
+                    margin: 5px;
+				}
+
+				input {
+					width: 130px;
+                    @include border;
+                    padding: 2px 5px;
+                    margin: 5px;
+					background-color:$color-1;
+				}
+				
+			}
+			button {
+				margin-left: auto;
+				margin-right: auto;
+				font-weight: bold;
+				border-style: outset;
+				padding: 5px 8px;
+				color:$color-text;
+				background-color:transparent;
+				boder-style:outset;
+				@include border;
+				@include text;
+
+				&:hover {
+					background-color: #8949b9;
+                    border-style: inset;
+				}
+					
+			}
+		
+		}
+		nav	{
+			display: inline-block;
+			width: 75%;
+            margin: 20px 20px 20px 20px;
+			padding: 12px;
+			@include border;
+			
+			ul {
+				  list-style-type: none;
+
+				  li {
+					float: left;
+				  	margin: 0;
+					&.selected > a {
+						font-weight:bold;
+						}		
+					&:hover > a {
+						text-decoration: underline;
+						color: #a8a8a8;
+						}
+					a {
+						text-decoration: none;
+						padding: 0 10px 0 10px;
+						color: $color-text;
+						font: 1.4em normal ;										
+						}
+					ul.sub-nav-list {
+						position: absolute;
+						display: none;
+						background-color: rgba(179, 94, 243, 0.9);
+						}
+					&:hover > a + ul {
+						display: block;
+						}
+						ul li {
+						    float: none;
+							margin: 0 15px;
+							padding: 10px 0;
+							border-bottom: 1px solid black;
+							
+							&:last-of-type {
+							    border-bottom: none;
+							}				
+							a {
+							    font-size: 1.2em;
+								color: $color-text;
+							}	
+						}
+				  }
+			}
+		}
+	}
+	section {
+		width: 75%;
+        float: left;
+       
+		article {
+			margin: 20px;
+            padding: 20px;
+             @include border;
+			
+			header {
+				background: none;
+                padding: 5px;
+
+				h1 {
+					font-size: 1.4em;
+                    padding: 0;
+				}
+			 }
+			}
+			footer {
+				 padding: 5px;
+
+				 p {
+					text-align: right;
+                    font-weight: normal;
+
+					time {
+						font-family: Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+					}
+					a {
+						text-decoration: none;
+						color:$color-1;
+												
+						&:hover	{
+						text-decoration: underline;
+						}
+					}
+				 }
+			} 
+		}
+		aside {
+			float: left;
+			width: 20%;
+			margin: 20px;
+
+			>ul {
+				list-style-type: none;
+
+				>li {
+					margin: 15px 0;
+					padding: 15px;
+					@include border;
+
+					h2 {
+						font-size: 1.1em;
+						font-weight: bold;
+					}
+					p {
+					margin-top: 10px;
+                    margin-right: 5px;
+                    margin-bottom: 10px;
+                    margin-left: 5px;
+
+                   		a {
+							 color: $color-link-aside;
+							 text-decoration: none;
+						}
+						strong {
+							color:$color-strong-aside;
+							font-weight: bold;
+							font-style: normal;
+						}
+						em {
+							color: $color-em-aside;
+							font-weight: normal;
+							font-style: italic;
+						}					
+					}
+					ul {
+						list-style-type: none;
+						margin-top: 10px;
+						margin-right: 0;
+						margin-bottom: 10px;
+						margin-left: 0px;
+
+						li {
+							margin-top: 5px;
+							margin-left: 10px;
+							margin-bottom: 0px;
+							margin-right: 0px;
+							background: url(images/li-dot.png) no-repeat;
+							background-position: 0 50%;
+							padding-left: 25px;
+						}
+					}
+				}
+			}
+		}
+		footer {
+			clear: both;
+			padding-top: 15px;
+			padding-bottom: 25px;
+			padding-right: 0px;
+			padding-left: 0px;
+			text-align: center;
+
+			p {
+				font-size: 1.2em;
+				font-weight: bold;
+			}	
+			
+			
+		}
+	}

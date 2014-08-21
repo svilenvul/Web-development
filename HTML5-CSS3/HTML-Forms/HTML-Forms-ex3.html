@@ -1,0 +1,771 @@
+<html>
+<head>
+	<title>
+		exercise 3 forms
+	</title>
+	<style>
+				table	{		
+		border:1px solid silver;
+		border-style:solid;
+		border-color:#EEE;
+		font-family:sans-serif;
+		font-size:12px;
+		color:#5e5e5e;
+		border-radius: 10px;
+		overflow:hidden;
+		}
+		img	{
+		-webkit-filter: grayscale(100%);
+		margin:auto;
+		height:18px;
+		width:18px;
+		padding:auto;
+		margin:auto;
+		position:relative;
+		right:4px;
+		}
+		tr td {
+		border:1px solid silver;
+		padding:4px;
+		padding-right:40px;
+		}
+		tr 	{
+		padding:0;
+		margin:0;
+		}
+		button {
+		height:24px;
+		width:24px;
+		}
+		span 	{
+		position:relative;
+		left:360px;
+		}
+		thead,tfoot tr	{
+		background: #eeeeee; /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-8 */
+
+		}
+	</style>
+</head>
+<body>
+	<table cellspacing=0 cellpadding=2px>	
+	<thead >
+		<tr>
+			<td colspan="6">Drag a column header and drop it here to group by that column</td>
+		</tr>
+		<tr>
+			<td>ProductID</td>
+			<td>Product name</td>
+			<td>Unit price</td>
+			<td>Quantity per unit</td>
+			<td>Units in stock</td>
+			<td>Discontinued</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" size="2"/>
+			</td>
+			<td>
+				<input type="text" size="25"/>
+			</td>
+			<td>
+				<input type="text" id="button price" size="8"/>
+				<button><img  src="http://confluence.jetbrains.com/download/attachments/51948262/funnel.png?version=1&modificationDate=1371623147000"/></button>
+			</td>
+			<td>
+				<input type="text" size="8"/>
+			</td>
+			<td>
+				<input type="text" id="units in stock" size="8"/>
+				<button><img  src="http://confluence.jetbrains.com/download/attachments/51948262/funnel.png?version=1&modificationDate=1371623147000"/> </button>
+			</td>
+			<td>
+				<input type="checkbox" id="discontinued" />
+				<button><img  src="http://confluence.jetbrains.com/download/attachments/51948262/funnel.png?version=1&modificationDate=1371623147000"/> </button>
+			</td>
+		</tr>
+	</thead>
+	<tbody>	
+		<tr>
+			<td>1</td>
+			<td>Chai</td>
+			<td>$18.00</td>
+			<td>10 boxes x 20 bags</td>
+			<td>39</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Chang</td>
+			<td>$19.00</td>
+			<td>24-12 oz bottles</td>
+			<td>17</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Aniseed Syrup</td>
+			<td>$10.00</td>
+			<td>12 - 550 ml bottles</td>
+			<td>13</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Chef Anton's Gumbo Seasoning</td>
+			<td>$22.00</td>
+			<td>48 - 6 oz jars</td>
+			<td>53</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Chef Anton's Gumbo mix</td>
+			<td>$21.35</td>
+			<td>36 boxes</td>
+			<td>0</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Grandma`s Boysenberry Spread</td>
+			<td>$25.00</td>
+			<td>12 - 08 oz jars</td>
+			<td>120</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Uncle Bob`s Organic Dried Pears</td>
+			<td>$30.00</td>
+			<td>12- 1 lb pkgs.</td>
+			<td>15</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>Northwoods Cranberry Sauce</td>
+			<td>$40.00</td>
+			<td>12 - 12 oz jars</td>
+			<td>6</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Mishu Kobe Niku</td>
+			<td>$97.00</td>
+			<td>18 - 500 g  pkgs.</td>
+			<td>29</td>
+			<td><input type="checkbox"/></td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>Ikura</td>
+			<td>$31.00</td>
+			<td>12 - 200 ml. jars</td>
+			<td>31</td>
+			<td><input type="checkbox"/></td>	
+		</tr>
+	</tbody>
+	<tfoot >
+		<tr>
+			<td colspan="6">
+			<button><img src="http://icongal.com/gallery/image/155248/actions_arrow_left_double.png"/></button>
+			<button><img src="http://icongal.com/gallery/image/160846/actions_arrow_left_screen.png"/></button>
+			1 2 3 4 5 6 7 8 9 10 ...
+			<button><img src="http://icongal.com/gallery/image/155230/actions_arrow_right.png"/></button>
+			<button><img src="http://icongal.com/gallery/image/155221/actions_arrow_right_double.png"/></button>
+			Page number
+			<select>
+					<option>1</option> 
+					<option>2</option> 
+					<option>3</option> 
+					<option>4</option> 
+					<option>5</option> 
+					<option>6</option> 
+					<option>7</option> 
+					<option>8</option> 
+					<option>9</option> 
+					<option>10</option> 					
+			</select>
+			<span>335104 items in 33511 pages</span>
+			</td>
+		</tr>
+	</tfoot>		
+	</table>	
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+																																																	
+</body>
+</html>

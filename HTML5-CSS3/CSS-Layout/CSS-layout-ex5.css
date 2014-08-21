@@ -1,0 +1,69 @@
+
+header, nav, section, article, aside, footer {
+display:block;
+}
+body		{
+background-color:white;
+width:670px;
+height:600px;
+font-size:15px;
+font-family:candara;
+padding:10px;
+font-weight:600;
+}
+nav  	{
+display:inline-block;
+height:30px;
+margin:0 auto;
+font-family:calibri;
+font-size:22px;
+padding-left:150px;
+}
+nav a	{
+color:#3EC5FF !important;
+font-weight:900;
+}
+section 	{
+display:inline-block;
+width:430px;
+border:1px solid #343434;
+}
+section fieldset 	{
+display:inline-block;
+height:130px;
+width:200px;
+margin:3px;
+padding:0;
+}
+section fieldset div 	{
+display:inline-block;
+margin:0px;
+vertical-align:top;
+width:47%;
+height:100%;
+}
+section fieldset legend 	{
+text-align:center;
+}
+section img 	{
+display:inline-block;
+height:80px;
+width:100px;
+}
+aside 	{
+display:inline-block;
+position:relative;
+top:-120px;
+width:190px;
+font-size:20px;
+padding-left:30px;
+vertical-align:middle;
+}
+.first-row  {
+text-align:center;
+}
+.second-row  {
+padding-left:8px;
+position:relative;
+top:15px;
+}

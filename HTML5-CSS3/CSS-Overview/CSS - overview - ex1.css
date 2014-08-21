@@ -1,0 +1,29 @@
+table {
+background-color:grey;font-weight:bold;font-family:Calibri;letter-spacing:-1px;color:#aaaaaa;
+}
+td:first-child {
+color:white;font-style:italic;vertical-align:text-top
+}
+th {
+font-size:1.5em;font-weight:normal;
+}
+tr:last-child {
+color:orange;    
+}
+.textYellow {
+color:#FFFFCC;
+}
+.circle{
+   display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color:green;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	margin-right:5px;
+}
+#textRed{
+color:red;
+}

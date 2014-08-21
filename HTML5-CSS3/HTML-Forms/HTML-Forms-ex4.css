@@ -1,0 +1,44 @@
+body {
+width:650px;
+font-family:candara;
+border-color:#343B3B;
+}
+nav	{
+margin:0 auto;
+text-align:center;
+font-family:calibri;
+font-size:22px;
+color:#40EEF1 !important;
+}
+aside 	{
+float:right;
+display:inline-block;
+font-size:20px;
+margin:75px 0;
+padding:auto;
+}
+
+fieldset img 	{
+	height:100px;
+	width:130px;
+	}
+table {
+	display:inline-block;
+	}
+
+table fieldset tr {
+	height:40px;
+	width:80px;
+	}
+
+table tr td 	{
+text-align:center;
+vertical-align:bottom;
+border:none;
+}
+fieldset,body>table	{
+border:3px solid #343B3B;
+}
+hr	{
+border:2px solid #343B3B;
+}

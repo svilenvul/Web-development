@@ -1,0 +1,204 @@
+﻿@text-size:10px;
+@h2-size:@text-size + 2px;
+@h1-size:@text-size + 4px;
+@nav-size:@text-size + 6px;
+
+@color-text:#efefbd;
+@color: #a05fe2;
+@link-color: @color + #404040;
+@input-background: @color - #202020;
+
+.border {
+    border-radius:6px;
+    border:1px solid @color - #888888;
+}
+
+.gradient {
+    background-repeat:no-repeat;
+    background: -webkit-linear-gradient(top, @color + #252525 0%, @color + #212121 7%, @color - #101010 16%, @color - #212121 100%);
+    background:@color - #212121; /* Old browsers */
+    background: -moz-linear-gradient(top, @color + #252525 0%,@color + #212121 8%,@color - #101010 16%,@color - #212121 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @color + #252525), color-stop(8%,@color - #101010 ), color-stop(16%,@color - #101010), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  @color + #252525 0%,@color + #212121 8%,@color - #101010  16%,@color - #212121 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  @color + #252525 0%,@color + #212121 8%,@color - #101010  16%,@color - #212121 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  @color + #252525 0%,@color + #212121 8%,@color - #101010  16%,@color - #212121100%); /* IE10+ */
+    background: linear-gradient(to bottom,  @color + #252525 0%,@color + #212121 8%,@color - #101010 16%,@color - #212121 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color + #252525', endColorstr='@color - #212121',GradientType=0 ); /* IE6-9 */
+    }
+.font {
+    color:@color-text;
+    font-family:Arial;
+    font-weight:normal;
+    font-size: @text-size;
+}
+.clear {
+  zoom: 1; // For IE 6/7 (trigger hasLayout)
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear:both;
+  }
+}
+* {
+    padding:0px;
+    margin:0px;
+}
+html {
+     background-color:@color - #212121;
+
+}
+body {
+    .gradient;
+    .font;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 45px;
+    height:100%;
+    width:100%;
+    header {
+        div {
+            height:80px;
+
+            div#reg-form-container {
+                float: right;
+                position: relative;
+                margin-right:35px;
+                form {
+                    div {                      
+                        
+                        input {
+                            .border;
+                            background: @input-background;
+                            margin-bottom: 10px;                                         
+                        }
+                    }
+
+                    button {
+                        background-color: transparent;
+                        .border;
+                        color: @color-text;
+                        border-style: outset;
+                        font-size: @h2-size;
+                        padding:5px;
+                    }
+                }
+            }
+        }
+
+            div#logo-container {
+                float: left;
+                position: relative;
+            }
+
+        nav {
+            .border;
+            display: block;
+            clear: both;
+            width: 75%;
+            margin-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+
+            ul {
+                li {
+                    list-style-type: none;
+                    display: inline-block;
+                    margin: 10px;
+
+                    a {
+                        color: @color-text;
+                        display: inline;
+                        text-decoration: none;
+                        font-size: @nav-size;
+                    }
+
+                    ul {
+                        display: none;
+
+                        li {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        float: left;
+        width: 65%;
+
+        article {
+            .border;
+            margin-bottom: 15px;
+            padding: 25px;
+
+            header {
+                h1 {
+                    font-size: @h1-size;
+                    margin-bottom: 10px;
+                }
+            }
+
+            footer {
+                margin-top:10px;
+                text-align: right;
+
+                p {
+                    a {
+                        color: @link-color;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        float: right;
+        width: 30%;
+        margin-right:15px;
+
+        &>ul {
+          
+           &>li {
+               margin:15px;
+               padding:15px;
+               list-style-type: none;
+               .border;
+
+                h2 {
+                    font-size: @h2-size;
+                    margin-bottom:10px;
+                }
+
+                p {
+                    a {
+                        text-decoration: none;
+                        color: @link-color;
+                    }
+                }
+                ul {
+                    li{
+                        list-style-type:none;
+                        margin-top: 5px;
+                        margin-left: 10px;
+                        margin-bottom: 0px;
+                        margin-right: 0px;
+                        background: url(images/li-dot.png) no-repeat;
+                        background-position: 0 50%;
+                        padding-left: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        clear: both;
+        text-align: center;
+    }
+}

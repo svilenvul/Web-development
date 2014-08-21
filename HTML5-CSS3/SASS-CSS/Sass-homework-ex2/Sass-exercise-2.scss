@@ -1,0 +1,33 @@
+body
+	{
+		ul {
+			li {
+				input {
+				display:none;
+				}
+				input:checked +label  {
+					img {
+							&:last-of-type{
+								display:block;
+							}
+						}
+				}
+				list-style-type:none;
+				display:inline-block;
+				img {
+					&:first-of-type {
+					height:200px;
+					width:200px;
+					}
+					&:last-of-type {
+					display:none;
+					position:absolute;
+					top:250px;
+					left:50px;
+					height:600px;
+					width:600px;
+					}
+				}
+			}
+		}
+  } 
