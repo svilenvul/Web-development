@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Conditional-Statements-Ex2</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that shows the sign (+ or -)
+			//of the product of three real numbers without calculating it.
+			//Use a sequence of if statements.
+			var a = 2
+			var b = 3;
+			var c = -3;
+
+			function findSignOfThreeNum(a, b, c) {
+				var negativeNumbers = 0;
+
+				for (var i = 0; i < arguments.length; i++) {
+					if (arguments[i] === 0) {
+						negativeNumbers = -1;
+						break;
+					}
+					if (arguments[i] < 0) {
+						negativeNumbers++;
+					}
+				}
+				
+				if (negativeNumbers === -1) {
+					return "0";
+				} else if (negativeNumbers % 2 === 0) {
+					return "+"
+				} else {
+					return "-";
+				}
+			}
+
+			jsConsole.writeLine("The sign of the product of " + 
+					a + ", " + b + ", " + c + " is: " + 
+					findSignOfThreeNum(a, b, c));
+		</script>
+	</body>
+</html>

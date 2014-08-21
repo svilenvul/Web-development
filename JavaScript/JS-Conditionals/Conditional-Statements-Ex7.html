@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Conditional-Statements-Ex7</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that finds the greatest of given 5 variables.
+			var a = 23;
+			var b = -245;
+			var c = 32;
+			var d = 21;
+			var e = 1;
+
+			function findBiggest(a, b, c, d, e) {
+				var biggest = a;
+				if (b > biggest) {
+					biggest = b;
+				}
+				if (c > biggest) {
+					biggest = c;
+				}
+				if (d > biggest) {
+					biggest = d;
+				}
+				if (e > biggest) {
+					biggest = e;
+				}
+				return biggest;
+			}
+
+			jsConsole.writeLine("The biggest number of " + 
+					a + "," + b + ", " + c + "," + d + ", " +
+					e + ", is: " + findBiggest(a, b, c, d, e));
+		</script>
+	</body>
+</html>

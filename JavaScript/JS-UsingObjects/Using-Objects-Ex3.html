@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Using-Objects-Ex3</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that makes a deep copy of an object
+			//The function should work for both primitive and reference types
+
+			var array = [2, 32, 2];
+			var primitive = 3;
+
+			function deepCopy(obj) {
+				if (obj == null || typeof (obj) != 'object') {
+					return obj;
+				}
+				var copy = obj.constructor();				
+
+				for (var key in obj) {
+					copy[key] = deepCopy(obj[key]);
+				}
+				return copy;
+			}
+
+			jsConsole.writeLine("The copy of the object " + 
+					array +	" is : "  + deepCopy(array));
+			jsConsole.writeLine("The copy of the primitive " + 
+					primitive +	" is: " + deepCopy(primitive));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Operators-Expressions-Ex8</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write an expression that calculates
+			//trapezoid's area by given sides a and b and height h.
+
+			var a = 23;
+			var b = 17;
+			var h = 4;
+
+			function calculateAreaOfTrapezoid(a, b, h) {
+				if (a === 0 || b === 0 || h === 0) {
+					return "Wrong values";
+				} else {
+					var area = ((a + b) / 2) * h;
+					return area;
+				}
+			}
+
+			jsConsole.writeLine("The area of trapezoid with a,b : " + 
+					a + ", " + b + ", and h: " + h + 
+					" is: " + calculateAreaOfTrapezoid(a, b, h));
+		</script>
+	</body>
+</html>

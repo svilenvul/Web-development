@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Functions-Ex6</title>
+	</head>
+	<body>
+		<label for="text-box">Type numbers, separeted by ( , )</label>
+		<input type="text" id="text-box"/>
+		<label for="index">Type index</label>
+		<input type="text" id="index" />
+		<button onclick="readData()">Check</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that checks if the element at given position
+			// in given array of integers is bigger than its two neighbors
+			//(when such exist).
+			
+			function readData() {
+				var textBoxValue = document.getElementById("text-box").value;
+				var array = textBoxValue.split(",").map(function (x) {
+					return parseFloat(x,10);
+				});
+				var indexValue = document.getElementById("index").value;
+				var index = parseInt(indexValue,10);
+				
+				if (isNaN(index)) {
+					jsConsole.writeLine("Incorect index value");
+				} else {
+					jsConsole.writeLine("The number at index " + 
+						index + " in the array " + array + 
+						" is bigger than his neighbours: " + 
+						isBiggerThanNeigbours(array, index));
+				}				
+			}
+			
+			function isBiggerThanNeigbours(array, index) {
+				if (index > array.length - 1) {
+					return "Element don't exist!";
+				} else if (index == 0) {
+					if (array[index] > array[index + 1]) {
+						return true;
+					} else {
+						return false;
+					}
+				} else if (index == array.length - 1) {
+					if (array[index] > array[index - 1]) {
+						return true;
+					} else {
+						return false;
+					}
+				} else {
+					if (array[index] > array[index - 1] && 
+							array[index] > array[index + 1]) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+			}
+
+
+			
+		</script>
+	</body>
+</html>

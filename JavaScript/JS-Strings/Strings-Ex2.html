@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Strings-Ex2</title>
+
+	</head>
+	<body>
+		<label for="textbx">Type expression:</label>
+		<input type="text" id="textbox" />
+		<button onclick="checkBrackets()">
+			Check brackets
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			// Write a JavaScript function to check if
+			//in a given expression the brackets are put correctly.
+			//Example of correct expression: ((a+b)/5-d).
+			//Example of incorrect expression: )(a+b)).
+
+			function checkBrackets() {
+				var expression = document.getElementById("textbox").value;
+				var leftBracketsSum = 0;
+				var rigthBracketsSum = 0;
+				if (expression.length === 0) {
+					jsConsole.writeLine("Plese type expression");
+				} else {
+					for (var i = 0; i < expression.length; i++) {
+						if (expression[i] === "(") {
+							leftBracketsSum++;
+						}
+						if (expression[i] === ")") {
+							rigthBracketsSum++;
+						}
+					}
+					jsConsole.writeLine("The brackets in expression " + 
+							expression + " are correct? - " + 
+							(leftBracketsSum === rigthBracketsSum));
+				}
+
+			}
+		</script>
+	</body>
+</html>

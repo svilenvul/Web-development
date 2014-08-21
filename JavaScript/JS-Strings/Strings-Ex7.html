@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Strings-Ex7</title>
+
+	</head>
+	<body>
+		<label>Type URL</label>
+		<input id = "textbox"/>;
+		<button onclick="pareseURL()">
+			Parse URL
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that parses an URL address given in the format:
+			//[protocol]://[server]/[resource]
+			//and extracts from it the [protocol], [server] and [resource] elements.
+			//Return the elements in a JSON object.For example:			
+
+			function pareseURL(sampleURL) {
+				var sampleURL = document.getElementById("textbox").value;				
+				
+				var protocol;
+				var server;
+				var resource;
+				var temp = sampleURL.split(/:\/\//);
+				
+				if(temp[0] !== sampleURL) {
+					protocol = temp[0];
+					sampleURL = temp[1];					
+				}
+				
+				var temp = sampleURL.split(/\//);
+				if (temp[0] !== sampleURL) {
+					server = temp[0];
+					resource =  "\/" + temp[1];
+				} else {
+					server = sampleURL;
+				}				
+			
+				var object =  {
+					protocol : protocol,
+					server : server,
+					resource : resource,
+					toString : function() {
+						return "protocol: \"" + this.protocol + 
+								"\", server: \"" + this.server + 
+								"\", resource: \"" + this.resource ;
+					}
+				};
+				jsConsole.writeLine(object);
+			}
+			
+		</script>
+	</body>
+</html>

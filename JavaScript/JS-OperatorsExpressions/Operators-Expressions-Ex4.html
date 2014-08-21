@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Operators-Expressions-Ex4</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write an expression that checks for given integer if its third digit (right-to-left) is 7.
+			var number = 7;
+			var year = 1777;
+			function checkThirdNumber(year, number) {
+				var thirdDigit = Math.floor((year / 100) % 10);
+				if (thirdDigit === number) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			jsConsole.writeLine("The third digit of the year " +
+				 year + " is " + number + ": " + checkThirdNumber(year, number));
+		</script>
+	</body>
+</html>

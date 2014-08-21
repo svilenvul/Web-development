@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Functions-Ex3</title>
+		<style>
+			#text,#word {
+				display : block;
+			}
+			textarea {
+				height : 100px;
+			}
+		</style>				
+	</head>
+	<body>
+		<label for="text">Type text</label>
+		<textarea id="text">The main subject in the Intro java book is Java for Java newbies.</textarea>
+		<label for="word">Type word to search</label>
+		<input type="text" id="word" />	
+		<input type="checkbox" id="case-sensitve"/> Case sensitive
+		<button onclick="readData()">
+			Find
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that finds all the occurrences of word in a text
+
+			function readData() {
+				var caseSensitve = document.getElementById("case-sensitve").checked;
+				var text = document.getElementById("text").value;
+				var word = document.getElementById("word").value;
+
+				
+				jsConsole.writeLine("The word \"" + word + "\" can be found " + 
+						findNumberOfOccurances (text, word, caseSensitve) + 
+						" times in the text");
+				
+			}
+
+			function findNumberOfOccurances
+					(text, word, caseSensitive) {
+				if (caseSensitive === false) {
+					text = text.toLowerCase();
+					word = word.toLowerCase();
+				}
+				var words=text.split(/\W+/); 
+				var sum = 0;
+				for (var i=0; i < words.length; i++) {
+				  if(words[i] === word) {
+				  	sum++;
+				  }
+				}
+				return sum;
+			}
+
+		</script>
+	</body>
+</html>

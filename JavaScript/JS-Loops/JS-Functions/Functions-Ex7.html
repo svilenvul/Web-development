@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>Functions-Ex7</title>
+	</head>
+	<body>
+		<label for="text-box">Type numbers, separeted by ( , )</label>
+		<input type="text" id="text-box"/>		
+		<button onclick="readData()">
+			Find first
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that checks if the element at given position
+			// in given array of integers is bigger than its two neighbors
+			//(when such exist).
+
+			function readData() {
+				var textBoxValue = document.getElementById("text-box").value;
+				var array = textBoxValue.split(",").map(function(x) {
+					return parseFloat(x, 10);
+				});				
+
+				jsConsole.writeLine("Index " +
+						firstBiggerThanNeighbours (array) + 
+						" is the index of the first number"+ 
+						" biggest than his neighbours " +
+						 array);
+			}
+
+			function isBiggerThanNeigbours(array, index) {
+				if (index > array.length - 1) {
+					return "Element don't exist!";
+				} else if (index == 0) {
+					if (array[index] > array[index + 1]) {
+						return true;
+					} else {
+						return false;
+					}
+				} else if (index == array.length - 1) {
+					if (array[index] > array[index - 1]) {
+						return true;
+					} else {
+						return false;
+					}
+				} else {
+					if (array[index] > array[index - 1] && 
+							array[index] > array[index + 1]) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+			}
+
+			function firstBiggerThanNeighbours(array) {
+				var result = -1;
+				for (var index = 0; index < array.length; index++) {
+					var currValue = isBiggerThanNeigbours(array, index);
+					if (currValue === true) {
+						result = index;
+						return result;
+						break;
+					}
+				}
+				if (result === -1) {
+					return result;
+				}
+			}
+
+		</script>
+	</body>
+</html>

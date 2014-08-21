@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Operators-Expressions-Ex1</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write an expression that checks if given integer is odd or even.
+			
+			var number = 7;
+			function checkOddOrEven(number) {
+				if (number % 2 == 0) {
+					return "even";
+				} else {
+					return "odd";
+				}
+			}
+
+			jsConsole.writeLine("Number " + number + " is " + checkOddOrEven(number));
+		</script>
+	</body>
+</html>

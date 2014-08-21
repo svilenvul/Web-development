@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Strings-Ex9</title>
+	</head>
+	<body>
+		<label>Type text with emails</label>
+		<textarea id="textarea">
+			62372,35896,1,cgreen,Chad,Green,cgreen@blah.com,123456789,0,,,,,,,,,3,Blah,,2013-05-02 17:42:31.659574,164842,,0,0,john@server.department.company.com,john@aol...com,mylist-bounces@example.co;
+		</textarea>
+		<button onclick="extractEmails()">
+			Extract emails
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a JavaScript function that extracts emails from string
+			
+			function extractEmails () {
+				var text = document.getElementById("textarea").value;
+				var matches = text.match(/([\da-z_\.-]+)@(?:[\da-z]+\.)+([a-z]{2,6})/g);
+				jsConsole.writeLine(matches);
+			}
+
+		</script>
+	</body>
+</html>

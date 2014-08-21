@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>Loops-Ex3</title>
+
+	</head>
+	<body>
+		<label for="tb">Type numbers, separeted by (,) <label/>
+		<input type="text" id="tb" />
+		<button onclick="convertStringToArray()">
+			Find min and max number
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that finds the max and min number from a sequence of numbers
+			
+			function convertStringToArray () {
+				var tbValue = document.getElementById("tb").value;
+				var array = tbValue.split(",").map(function (x) {
+					if(isNaN(x)) {
+						jsConsole.writeLine("Invalid numbers !");	
+						return;
+					} else {
+						return parseInt(x,10);
+					}
+				
+				});
+			
+				printMaxAndMinNumber(array);
+			}
+			
+			function printMaxAndMinNumber(array) {								
+				var maxNumber;
+				var minNumber;
+				for (var i = 0; i < array.length; i++) {
+					if (array[i] > maxNumber || maxNumber === undefined) {
+						maxNumber = array[i];
+					}
+					if (array[i] < minNumber || minNumber === undefined) {
+						minNumber = array[i];
+					}
+				}
+				jsConsole.writeLine("Min number is " +
+						 minNumber + ", max number is " + maxNumber);
+			}
+			
+		</script>
+	</body>
+</html>

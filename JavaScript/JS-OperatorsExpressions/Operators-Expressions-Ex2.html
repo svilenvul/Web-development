@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Operators-Expressions-Ex2</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a boolean expression that checks for given integer
+			//if it can be divided (without remainder) by 7 and 5 in the same time.
+			
+			var number = 35;
+			function divisableByFiveAndSeven(number) {
+				if (number % 5 === 0 && number % 7 === 0) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			jsConsole.writeLine("Number " + number + 
+				" can be divided by 5 and 7: " + 
+				divisableByFiveAndSeven (number));
+		</script>
+	</body>
+</html>

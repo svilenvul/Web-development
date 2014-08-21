@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Conditional-Statements-Ex4</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Sort 3 real values in descending order using nested if statements.
+			var a = 6;
+			var b = 0;
+			var c = 6;
+
+			function sortThreeNumbers(a, b, c) {
+				var temp = 0;
+
+				if (b > a) {
+					temp = a;
+					a = b;
+					b = temp;
+				}
+				if (c > a) {
+					temp = a;
+					a = c;
+					c = temp;
+				}
+				if (c > b) {
+					temp = b;
+					b = c;
+					c = temp;
+				}
+				return a + " " + b + " " + c;
+			}
+
+			jsConsole.writeLine
+				("The sorted numbers in descending order are: " +
+				 sortThreeNumbers(a, b, c));
+		</script>
+	</body>
+</html>

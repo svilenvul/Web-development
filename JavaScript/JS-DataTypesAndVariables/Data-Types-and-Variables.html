@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Data types and Varables </title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Exercise 1
+			//Assign all the possible JavaScript literals to different variables.
+			var arrayLiteral = ["French Roast", "Colombian", "Kona"];
+			var boolLiteral = true;
+			var decIntegerLiteral = 117;
+			var octIntegerLiteral = 017;
+			var hexIntegerLiteral = 0x1A;
+			var floatIntegerLiteral = 0.34;
+			var objectLiteral = {
+				myCar : "Saturn",
+				myHome : "House",
+				special : "Sales"
+			};
+			var stringLiteral = "one line \n another line";
+
+			//Exercise 2
+			// Create a string variable with quoted text in it.
+			jsConsole.writeLine("Exercise 2");
+			var quotedText = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
+			jsConsole.writeLine("Quoted text: " + quotedText);
+						
+			//Exercise 3
+			//Try typeof on all variables you created.
+			jsConsole.writeLine("Exercise 3 ");
+			jsConsole.writeLine("The type of array literal is: " + typeof(arrayLiteral));
+			jsConsole.writeLine("The type of boolean literal is: " + typeof(boolLiteral));
+			jsConsole.writeLine("The type of integer literal is: " + typeof(decIntegerLiteral));
+			jsConsole.writeLine("The type of integer literal is: " + typeof(octIntegerLiteral));
+			jsConsole.writeLine("The type of integer literal is: " + typeof(hexIntegerLiteral));
+			jsConsole.writeLine("The type of integer literal is: " + typeof(floatIntegerLiteral));
+			jsConsole.writeLine("The type of boolean literal is: " + typeof(objectLiteral));
+			jsConsole.writeLine("The type of string literal is: " + typeof(stringLiteral));			
+
+			//Exercise 4
+			// Create null, undefined variables and try typeof on them.
+			jsConsole.writeLine("Exercise 4");		
+			var nullValue = null;
+			var undefinedValue;
+			jsConsole.writeLine("The type of null variable is: " + typeof(nullValue));
+			jsConsole.writeLine("The type of variable without assigned value is: " + typeof(undefinedValue));
+		</script>
+	</body>
+</html>

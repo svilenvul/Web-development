@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Using-Objects-Ex5</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that finds the youngest person
+			//in a given array of persons and prints his/hers full name
+			//Each person have properties firstname, lastname and age, as shown:
+
+			var persons = [{
+				firstname : "Gosho",
+				lastname : "Petrov",
+				age : 32
+			}, {
+				firstname : "Tosho",
+				lastname : "Minkow",
+				age : 16
+			}, {
+				firstname : "Mincho",
+				lastname : "lekov",
+				age : 45
+			}, {
+				firstname : "Gosho",
+				lastname : "Petrov",
+				age : 32
+			}, {
+				firstname : "Ivelin",
+				lastname : "Sinigerov",
+				age : 12
+			}, {
+				firstname : "Bay",
+				lastname : "Ivan",
+				age : 81
+			}];
+
+			function compare(person1, person2) {
+				if (person1.age < person2.age) {
+					return -1;
+				} else if (person1.age > person2.age) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+
+			persons.sort(compare);
+			jsConsole.writeLine("Persons list: \n" );			
+			for (var i=0; i < persons.length; i++) {
+			  jsConsole.writeLine(persons[i].firstname + " " +
+			  		 persons[i].lastname + " " + persons[i].age);
+			}	
+			jsConsole.writeLine("");	
+			jsConsole.writeLine
+					("The youngest person is: " + persons[0].firstname + 
+					" " + persons[0].lastname + " " + persons[0].age);
+
+		</script>
+	</body>
+</html>

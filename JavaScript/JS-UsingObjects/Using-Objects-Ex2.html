@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Using-Objects-Ex2</title>
+	</head>
+	<body>		
+		<span>Type numbers, separeted by (,) </span>
+		<input type="text" id="array"/>
+		<span>Type number to be removed</span>
+		<input type="text" id="number"/>
+		<button onclick="removeAllfromArray()">Remove all numbers from array</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			// Write a function that removes all
+			// elements with a given value
+			// Attach it to the array class		
+			
+			
+			function removeAllfromArray() {	
+				var array = document.getElementById("array").value.split(",");
+				var number = document.getElementById("number").value.valueOf();					
+				var result;
+				if (isNaN(number)) {
+					result = "Invalid values. Please type numbers";
+				}
+				for(var i = 0; i < array.length; i++) {
+					if (isNaN(array[i])) {
+						result = "Invalid values. Please type numbers";
+						break;
+					} 
+				}
+				if(!result) {
+					result = array.removeAll(number);
+				}				
+				jsConsole.writeLine(result);
+			}
+			
+			Object.prototype.removeAll = function test(number) {
+				var position = this.indexOf(number);
+				while (position >= 0) {
+					this.splice(position, 1);
+					position = this.indexOf(number, position);
+				}
+				return this;
+			}			
+		</script>
+	</body>
+</html>

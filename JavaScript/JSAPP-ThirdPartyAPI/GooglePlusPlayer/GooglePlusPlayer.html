@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>  
+    <script src="https://www.youtube.com/iframe_api"></script>	
+	<title>GooglePlusPlayer</title>
+	<script src="scripts/libs/require.js" data-main="scripts/app-config.js"></script>
+</head>
+<body>
+	<div id="player"></div>  
+	<button id="single-video">Load video</button>
+    <button id="pause">Pause video</button>
+    <button id="play">Play video</button>
+    <br />
+    <span>Playlist: </span><textarea id="playlist">aqmdG7dIzR0,fNddo-xLoL8,L2o5dnVuxiI</textarea>
+    <button id="load-playlist">Load playlist</button>
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>    
+	<script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+    </script>
+</body>
+</html>

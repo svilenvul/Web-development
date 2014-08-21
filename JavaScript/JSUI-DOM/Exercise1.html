@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Document Object Model - Exercise1</title>
+	<style>
+		div 
+		{
+			border: 1px solid black;
+			padding: 10px;
+			margin: 10px;			
+		}		
+	</style>
+</head>
+<body>
+	<button onclick='selectDivsWithParenDivUsingGetElementsByTagName()'>
+	Select using getElementsByTagName</button>
+	<button onclick='selectDivsWithParentDivUsingQuerySelectorAll()'>
+	Select using QuerySelectorAll()</button>
+	<button onclick="deselect()">Deselect</button>
+	<div>
+		<div>
+			<div>        
+			</div>
+		</div>
+	</div>
+	<div></div>
+	<div></div>
+	<div></div>
+	
+	<script>
+		//Write a script that selects all the div nodes 
+		//that are directly inside other div elements
+    
+		function selectDivsWithParenDivUsingGetElementsByTagName (){
+			var divs = document.getElementsByTagName('div');
+			var divsWithParentsDivs=[];
+  
+			for (var i = 0; i < divs.length; i++) {   
+				var parent = divs[i].parentNode;
+				
+				if (parent.tagName ==='DIV') {
+					divs[i].style.borderColor="#11dddd";
+				}    
+			}		
+		}	
+
+		function selectDivsWithParentDivUsingQuerySelectorAll (){
+			var divs = document.querySelectorAll('div');
+			var divsWithParentsDivs=[];
+  
+			for (var i = 0; i < divs.length; i++) {   
+				var parent = divs[i].parentNode;
+				
+				if (parent.tagName ==='DIV') {
+					divs[i].style.borderColor="#11dddd";
+				}    
+			}  
+		}
+		
+		function deselect () {
+			var divs = document.querySelectorAll('div');
+			
+			for (var i = 0; i < divs.length; i++) {   					
+				divs[i].style.borderColor="#010101";
+			}
+		}
+	</script>
+</body>
+</html>

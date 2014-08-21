@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Strings-Ex10</title>
+	</head>
+	<body>
+		<label>Type text</label>
+		<textarea id="textarea">Dennis and Edna sinned.Ana, nab a banana.Madam in Eden, I'm Adam.Murder for a jar of red rum.
+		</textarea>
+		<button onclick="extractPalindromes()">
+			Extract palindromes
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a program that extracts from a given text all palindromes,
+			// e.g. "ABBA", "lamal", "exe".
+
+			function extractPalindromes() {
+				var text = document.getElementById("textarea").value;
+				var wordsArray = text.split(/\W+/g);
+				
+				var palindromes = (isPalindrome(wordsArray));
+				
+				if(palindromes.length === 0) {
+					jsConsole.writeLine("No palindromes in text");
+				} else {
+					jsConsole.writeLine(palindromes);
+				}
+								
+				function isPalindrome(wordsArray) {
+					var palindromes = new Array();
+					var temp;
+					for (var index = 0; index < wordsArray.length; index++) {
+						temp = wordsArray[index].split("").reverse().join("");
+						if (wordsArray[index].toLowerCase() === temp.toLowerCase() && 
+								wordsArray[index].length > 1) {
+							palindromes.push(wordsArray[index]);
+						}
+					}
+					return palindromes;
+				}
+
+			}			
+
+		</script>
+	</body>
+</html>

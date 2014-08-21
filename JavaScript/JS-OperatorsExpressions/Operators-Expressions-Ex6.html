@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Operators-Expressions-Ex6</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write an expression that checks if given print
+			//(x,  y) is within a circle K(O, 5).
+
+			var x = 2;
+			var y = 4;
+			function isPointInTheCircle(radius, x, y) {
+				if (Math.pow(radius, 2) > Math.pow(x, 2) + Math.pow(y, 2)) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			jsConsole.writeLine("The point with coor X=" + 
+					x + " ,Y= " + y + " is in a circle with R=5: " + 
+					isPointInTheCircle(5, x, y));
+		</script>
+	</body>
+</html>

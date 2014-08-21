@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<title>Conditional-Statements-Ex8</title>
+
+	</head>
+	<body>
+		<p>Please type digit from 0 to 999</p>
+		<input type = "text" id = "tb">
+		</input>
+		<button onclick = "printNumbersInEnglish()">
+			Result
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that converts a number in the range [0...999]
+			//to a text corresponding to its English pronunciation.
+			function printNumbersInEnglish() {
+				var numberValue = document.getElementById("tb").value;
+				var number = parseInt(numberValue);
+				if (isNaN(number) || number >= 1000) {
+					jsConsole.writeLine("Invalid number. Type numbers 0-999!!");
+					return;
+				}
+				var ones = number % 10;
+				var tens = Math.floor((number / 10)) % 10;
+				var hundreds = Math.floor((number / 100)) % 10;
+
+				var result = "";
+				switch (hundreds) {
+					case 1:
+						result = result + "one hundred ";
+						break;
+					case 2:
+						result = result + "two hundred ";
+						break;
+					case 3:
+						result = result + "three hundred ";
+						break;
+					case 4:
+						result = result + "four hundred ";
+						break;
+					case 5:
+						result = result + "five hundred ";
+						break;
+					case 6:
+						result = result + "six hundred ";
+						break;
+					case 7:
+						result = result + "seven hundred ";
+						break;
+					case 8:
+						result = result + "eight hundred ";
+						break;
+					case 9:
+						result = result + "nine hundred ";
+						break;
+					case 0:
+						break;
+				}
+
+				if (hundreds > 0 && tens > 0 && ones === 0) {
+					result = result + "and ";
+				}
+				if (hundreds > 0 && tens === 1) {
+					result = result + "and ";
+				}
+				if (hundreds > 0 && tens === 0 && ones > 0) {
+					result = result + "and ";
+				}
+
+				switch (tens) {
+					case 1:
+						switch(ones) {
+							case 0:
+								result = result + "ten ";
+								break;
+							case 1:
+								result = result + "eleven ";
+								break;
+							case 2:
+								result = result + "twelve ";
+								break;
+							case 3:
+								result = result + "thirteen ";
+								break;
+							case 4:
+								result = result + "fourteen ";
+								break;
+							case 5:
+								result = result + "fifteen ";
+								break;
+							case 6:
+								result = result + "sixteen ";
+								break;
+							case 7:
+								result = result + "seventeen ";
+								break;
+							case 8:
+								result = result + "eighteen ";
+								break;
+							case 9:
+								result = result + "nineteen ";
+								break;
+						}
+						break;
+					case 2:
+						result = result + "twenty ";
+						break;
+					case 3:
+						result = result + "thirty ";
+						break;
+					case 4:
+						result = result + "forty ";
+						break;
+					case 5:
+						result = result + "fifty ";
+						break;
+					case 6:
+						result = result + "sixty ";
+						break;
+					case 7:
+						result = result + "seventy ";
+						break;
+					case 8:
+						result = result + "eighty ";
+						break;
+					case 9:
+						result = result + "ninety ";
+						break;
+					case 0:
+						break;
+				}
+
+				if (tens !== 1) {
+					switch (ones) {
+						case 1:
+							result = result + "one ";
+							break;
+						case 2:
+							result = result + "two ";
+							break;
+						case 3:
+							result = result + "three ";
+							break;
+						case 4:
+							result = result + "four ";
+							break;
+						case 5:
+							result = result + "five ";
+							break;
+						case 6:
+							result = result + "six ";
+							break;
+						case 7:
+							result = result + "seven ";
+							break;
+						case 8:
+							result = result + "eight ";
+							break;
+						case 9:
+							result = result + "nine ";
+							break;
+					}
+				}
+				if (hundreds === 0 && tens === 0 && ones === 0) {
+					result = result + "zero ";
+				}
+				jsConsole.writeLine(result);
+			}
+		</script>
+	</body>
+</html>

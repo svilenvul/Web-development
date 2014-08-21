@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Student manager</title>
+	<script src="libs/jquery-2.0.2.js"></script>
+	<link rel="stylesheet "type="text/css" href="styles/studentManager.css"/>
+</head>
+<body>
+	<div id="wrapper">
+		<h3>Student manager</h3>
+		<div id = "control-panel">			
+			<label for="tb-name">Name: </label>
+			<input id="tb-name" name="tb-name" type="text" />		
+			<label for="tb-grade">Grade: </label>
+			<input id="tb-grade" name="tb-grade" type="number" min='1' max='12'/>
+			<input id="tb-id" name="tb-grade" type="number" visibility="none"/>
+			<br/>
+			<button id='btn-add-student'>Add new</button>
+			<button id="btn-remove-student">Remove</button>			
+		</div>		
+		<h3>Students list</h3>
+		<div id="students-container">				
+			<ul>
+				<li>					
+				</li>
+			</ul>			
+		</div>		
+		<div class="messages">
+			<h3></h3>
+			<strong class="messages success">
+			</strong>
+			<strong class="messages error">
+			</strong>
+		</div>
+		<script src="studentManager.js"></script>
+	</div>
+</body>
+</html>

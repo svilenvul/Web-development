@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Table-Handlebars
+		</title>
+		<style>		
+		</style>
+	</head>
+	<body>
+		<script src="scripts/handlebars-v1.3.0.js"></script>
+		<script src="http://www.fsfoo.com/js/vendor/handlebars-1.0.rc.2.js"></script>
+		<script id="select-template" type="text/x-handlbar-template">
+		  <select>
+			{{#items}}
+			<option value="{{value}}">{{text}}</option>
+			{{/items}}
+		  </select>
+		</script>
+		<script src="scripts/dynamic-select.js"></script>
+	</body>
+</html>

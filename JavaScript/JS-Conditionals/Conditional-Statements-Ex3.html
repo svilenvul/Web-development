@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Conditional-Statements-Ex3</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that finds the biggest
+			//of three integers using nested if statements.
+			var a = 3;			
+			var b = 53;
+			var c = 302;
+
+			function findBiggestOfThree(a, b, c) {
+				var biggest = a;
+
+				if (b > biggest) {
+					biggest = b;
+				}
+				if (c > biggest) {
+					biggest = c;
+				}
+				return biggest;
+			}
+
+			jsConsole.writeLine("The biggest number of " +
+					 a + ", " + b + ", " + c + " is: " + 
+					 findBiggestOfThree(a, b, c));
+		</script>
+	</body>
+</html>

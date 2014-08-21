@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Arrays-Ex5</title>
+	</head>
+	<body>
+		<label>Type numbers, divided by ( , )</label>
+		<input type="text" id="textbox" />
+		<button onclick="convertStringToArray()">
+			Find most frequent
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a program that finds the most frequent number in an array.
+			function convertStringToArray () {
+				var textbox = document.getElementById("textbox");
+				var array = textbox.value.split(",").map(function (x) {
+					return parseInt(x, 10);
+				});
+				
+				selectionSort(array);
+			}
+			
+			function selectionSort(numbers) {
+				var minIndex;
+				var temp;
+				for (var i = 0; i < numbers.length; i++) {
+					minIndex = i;
+
+					for (var l = i + 1; l < numbers.length; l++) {
+						if (numbers[l] < numbers[minIndex]) {
+							minIndex = l;
+						}
+					}
+
+					if (i != minIndex) {
+						temp = numbers[i];
+						numbers[i] = numbers[minIndex];
+						numbers[minIndex] = temp;
+					}
+				}
+								
+				findMostFrequent(numbers);				
+			}
+			
+			function findMostFrequent (sortedArray) {
+				var currentCount = 1;
+				var mostFrequentCount = 1;
+				var mostFrequent = sortedArray[0];
+				for (var i=0; i < sortedArray.length - 1; i++) {
+				  if (sortedArray[i] === sortedArray[i + 1]) {
+				  	currentCount++;
+				  } else {
+				  	currentCount = 1;
+				  }
+				  if (currentCount > mostFrequentCount) {
+				  	mostFrequentCount = currentCount;
+				  	mostFrequent = sortedArray[i];
+				  }				 
+				}
+				jsConsole.writeLine("The most frequent number is: " + mostFrequent);
+			} 
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Arrays-Ex3</title>
+	</head>
+	<body>
+		<label>Type numbers, divided by ( , )</label>
+		<input type="text" id="textbox" />		
+		<button onclick="convertStringToArray()">
+			Find
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that finds the maximal sequence of
+			//equal elements in an array.
+			
+			jsConsole.writeLine("Find max sequence of equal numbers or returns (-1)");
+			
+			function convertStringToArray () {
+				var textbox = document.getElementById("textbox");
+				var array = textbox.value.split(",").map(function (x) {
+					return parseInt(x, 10);
+				});
+				
+				jsConsole.writeLine(findMaxSequenceOfEqual(array));
+			}
+			
+			function findMaxSequenceOfEqual(numbers) {
+				var endIndex = 0;
+				var length = 0;
+				var maxLength = 0;
+				for (var i = 1; i < numbers.length; i++) {
+					if (numbers[i - 1] == numbers[i]) {
+						length++;
+						if (length > maxLength) {
+							maxLength = length;
+							endIndex = i;
+						}
+					} else {
+						length = 0;
+					}
+				}
+				if (maxLength > 0) {
+					return numbers.slice(endIndex - maxLength, endIndex + 1);
+				} else {
+					return -1;
+				}
+			}
+			
+			
+
+		</script>
+	</body>
+</html>

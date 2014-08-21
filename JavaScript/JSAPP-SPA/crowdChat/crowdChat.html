@@ -1,0 +1,52 @@
+<!
+DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Crowd Chat</title>
+	<script src="scripts/libs/require.js" data-main="scripts/main.js"></script>
+	<link rel="stylesheet "type="text/css" href="styles/crowdChat.css"/>
+</head>
+<body>
+	<div id="wrapper">
+		<header>Welcome, <span id ="user">anonymous, please log in :</span></header>
+		<div id = "control-panel">
+			<div id="log-panel">
+				<label for="user-name">User name</label>			
+				<br/>
+				<input id="user-name" name="user-name" type="text" maxlength ="12"/>
+				<br/>
+				<button id ="btn-log">Log in</button>
+			</div>
+			<div id="message-panel">
+				<label for="user-input">Type message: </label>			
+				<br/>
+				<textarea id="user-input" name="user-input"></textarea>
+				<br/>
+				<button id="btn-send">Send message</button>
+			</div>
+		</div>	
+		
+		<h3>Latest chats</h3>	
+		<div id="messages-container">
+			<div class="notification">Please Wait 
+			<br/>			
+			Loading messages
+			</div>
+		</div>	
+		<script id="template-container" type="text/x-handlbar-template">
+			{{#each message}}
+			<div class ="message">
+				<strong class="message-by">{{{by}}}:</strong>
+				<div class="message-text">{{{text}}}</div>
+			</div>
+			 {{/each}}
+		</script>	
+		<footer>EnjoyCrowdChat</footer>
+		<div class="notification">
+			<strong id="error">
+				You have to log in to send message
+			</strong>
+		</div>
+	</div>
+</body>
+</html>

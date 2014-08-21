@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Strings-Ex6</title>
+
+	</head>
+	<body>
+		<label>Type text with tags HTML tags</label>
+		<textarea id = "textbox"><html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>";
+		var test2 ="This is a <EM>first</EM> test</textarea>
+		<button onclick="extractText()">
+			Replace tags
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			function extractText() {
+				var text = document.getElementById("textbox").value;
+				var words = text.split(/<[^>]+>/);
+				var textWithoutTags = words.join("");
+
+				jsConsole.writeLine(textWithoutTags);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Document Object Model - Exercise2 </title>
+</head>
+<body>	
+	<input id = "input" type = "text"/>
+	<button onclick="writeInputValueToConsole()"> Write to console</button>
+	<script>
+		//Create a function that gets the value of <input type="text"> 
+		//and prints its value to the console
+		
+		function writeInputValueToConsole () {
+			var input = document.getElementById("input");
+			console.log(input.value);
+		}
+	</script>
+</body>
+</html>

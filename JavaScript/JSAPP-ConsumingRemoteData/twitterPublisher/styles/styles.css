@@ -1,0 +1,43 @@
+* {
+	margin : 0px;
+	padding : 0px;
+}
+a {
+	color: grey!important;
+}
+
+#twitter-response {
+	width: 800px;
+	overflow: auto;
+}
+.post {
+	height:100px;	
+}
+
+.foto {
+	display :inline-block;
+	float:left;
+	width: 50px;	
+	margin-top : 10px;
+	margin-bottom: 10px;
+}
+
+.text {
+	display :inline-block;
+	float:right;	
+	width: 730px;	
+}
+.user-name {
+	font-weight : 900;
+	text-align : left;
+	
+}
+
+.content {
+	display : inline-block;	
+}
+
+.date {
+	text-align : right;
+	float : right;
+}

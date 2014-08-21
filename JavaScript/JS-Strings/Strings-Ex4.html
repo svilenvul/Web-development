@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Strings-Ex4</title>
+
+	</head>
+	<body>
+		<label>Type text with tags("upcase","lowcase","mixcase")</label>
+		<textarea id = "textbox">We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>.We <mixcase>dont </mixcase> have <lowcase>anything</lowcase> else.</textarea>
+		<button onclick="findTags()">
+			Replace tags
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//You are given a text. Write a function that changes the text in all regions:
+			//<upcase>text</upcase> to uppercase.
+			//<lowcase>text</lowcase> to lowercase
+			//<mixcase>text</mixcase> to mix casing(random)
+			
+			String.prototype.replaceAt = function(index, character) {
+				return this.substr(0, index) + character + this.substr(index + character.length);
+			}			
+
+			function findTags() {
+				var text = document.getElementById("textbox").value;
+			
+				var tag = new Array();
+				tag.push("text");
+				var tagList = new Array();
+				var startPos = -1;
+				var endPos = 0;
+				var addTag = true;
+
+				for (var i = 0; i < text.length - 1; i++) {
+					if (text.charAt(i) === "<" || i === text.length - 1) {
+						endPos = i + 1;
+						var currTag = new Array();
+						currTag.push(startPos + 1);
+						currTag.push(endPos - 1);
+						currTag.push(tag[tag.length - 1]);
+						tagList.push(currTag);
+						addTag = true;
+					} else if (text.charAt(i) === "/") {
+						tag.pop();
+						addTag = false;
+					} else if (text.charAt(i) === ">") {
+						startPos = i;
+						if (addTag === true) {
+							tag.push(text.substr(endPos, startPos - endPos));
+						}
+					}
+				}			
+				jsConsole.writeLine(replaceTags(text, tagList));
+				
+			}			
+			function replaceTags(text, result) {
+				for (row in result) {
+					switch (result[row][2]) {
+						case "text":
+							var replacment = text.substr(result[row][0], result[row][1] - result[row][0]);
+							result[row][2] = replacment;
+							break;
+						case "mixcase":
+							var replacment = text.substr(result[row][0], result[row][1] - result[row][0]);
+							for (var i = 0; i < replacment.length; i++) {
+								var random = Math.round(Math.random());
+								if (random === 1) {
+									replacment = replacment.replaceAt(i, replacment[i].toUpperCase());
+								}
+							}
+							result[row][2] = replacment;
+							break;
+						case "upcase":
+							var replacment = text.substr(result[row][0], result[row][1] - result[row][0]);
+							result[row][2] = replacment.toUpperCase();
+							break;
+						case "lowcase":
+							var replacment = text.substr(result[row][0], result[row][1] - result[row][0]);
+							result[row][2] = replacment.toLowerCase();
+							break;
+					}
+				}
+				var replacedText = "";
+				for (var i = 0; i < result.length; i++) {
+					replacedText += result[i][2];
+				}
+				return replacedText;
+			}			
+		</script>
+	</body>
+</html>

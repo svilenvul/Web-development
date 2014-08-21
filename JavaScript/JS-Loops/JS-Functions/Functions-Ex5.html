@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Functions-Ex5</title>		
+	</head>
+	<body>		
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that counts how many times given number appears in given array. 
+			//Write a test function to check if the function is working correctly.
+
+			function findNumberOfOccurancesInArray(array, number) {
+				var sum = 0;
+				for (var i = 0; i < array.length; i++) {
+					if (array[i] == number) {
+						sum++;
+					}
+				}
+				return sum;
+			}
+
+			function generateRandomArrays(arrayLength, minNum, maxNum) {
+				var array = new Array();
+				for (var i = 0; i < arrayLength; i++) {
+					array[i] = generateRandomNumber(minNum, maxNum);
+				}
+				return array;
+			}
+
+			function generateRandomNumber(min, max) {
+				return (Math.round((max - min) * Math.random() + min));
+			}
+
+			function testFindNumber(numberOfTests) {				
+				for (var i = 0; i < numberOfTests; i++) {
+					var number = generateRandomNumber(0,10);
+					var testArray = generateRandomArrays(20, 0, 10);
+
+					jsConsole.writeLine("The number " + number + " is " + 
+							findNumberOfOccurancesInArray(testArray, number) + 
+							" times in array: " + testArray);
+				}
+			}
+
+
+			jsConsole.writeLine("Tests for the function findNumberOfOccurances()");
+			testFindNumber(5);
+		</script>
+	</body>
+</html>

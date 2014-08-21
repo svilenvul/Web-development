@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Arrays-Ex5</title>
+	</head>
+	<body>
+		<label>Type numbers, divided by ( , )</label>
+		<input type="text" id="textbox" />
+		<button onclick="convertStringToArray()">
+			Sort
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script to sort an array. Use the "selection sort" algorithm:
+			function convertStringToArray () {
+				var textbox = document.getElementById("textbox");
+				var array = textbox.value.split(",").map(function (x) {
+					return parseInt(x, 10);
+				});
+				
+				jsConsole.writeLine("The sorted numbers are: " + 
+						selectionSort(array));
+			}
+			
+			function selectionSort(numbers) {
+				var minIndex;
+				var temp;
+				for (var i = 0; i < numbers.length; i++) {
+					minIndex = i;
+
+					for (var l = i + 1; l < numbers.length; l++) {
+						if (numbers[l] < numbers[minIndex]) {
+							minIndex = l;
+						}
+					}
+
+					if (i != minIndex) {
+						temp = numbers[i];
+						numbers[i] = numbers[minIndex];
+						numbers[minIndex] = temp;
+					}
+				}
+				return numbers;
+			}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Functions-Ex4</title>
+		<style>
+			div {
+				border : 1px solid black;
+				height : 50px;
+			}
+		</style>
+	</head>
+	<body>	
+		<button onclick="countDivs()">
+			Count Divs
+		</button>
+		<button onclick="createDiv()">
+			New Div
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function to count the number of divson the web page
+			
+			function countDivs() {
+				var countDivs = document.getElementsByTagName('div').length;
+				alert("The number of divs is: " + countDivs);
+			}
+			
+			function createDiv() {
+				var newDiv = document.createElement('div');
+				document.body.appendChild(newDiv);
+			}
+					
+		</script>
+	</body>
+</html>

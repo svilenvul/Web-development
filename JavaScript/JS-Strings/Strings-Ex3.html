@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Strings-Ex3</title>
+
+	</head>
+	<body>
+		<label></label>
+		<textarea id = "textbox">We are living in an yellow submarine.We dont have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.</textarea>
+		<label for="substring">Substring</label>
+		<input type="text" id="substring" />
+		<button onclick="findNumberOfOccurances()">
+			Find in text
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a JavaScript function that finds
+			//how many times a substring is contained in a given text
+			//(perform case insensitive search).
+
+			function findNumberOfOccurances(text, substr) {
+				var text = document.getElementById("textbox").value.toLowerCase();
+				var substr = document.getElementById("substring").value.toLowerCase();
+				var sum = 0;
+				var index = text.indexOf(substr);
+				while (index >= 0) {
+					sum++;
+					index = text.indexOf(substr, index + 1);
+				}
+				jsConsole.writeLine("the string \"" + substr + 
+					"\" is " + sum + " times in the text");
+			}
+		</script>
+	</body>
+</html>

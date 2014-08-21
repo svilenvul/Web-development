@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Operators-Expressions-Ex9</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write an expression that checks for given point (x, y)
+			//if it is within the circle K( (1,1), 3)
+			//and out of the rectangle R(top=1, left=-1, width=6, height=2).
+			
+			var x = 2;
+			var y = 3;
+			
+			function checkInCircle(x, y) {
+				var radius = 3;
+				var x0 = 1;
+				var y0 = 1;
+
+				if (Math.pow(x - x0, 2) + Math.pow(y - y0, 2) < 
+						Math.pow(radius, 2)) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			function checkOutOfRectangle(x, y) {
+				var width = 6;
+				var height = 2;
+				var bottomLeftX = 1;
+				var bottomLeftY = -1;
+
+				if (x >= bottomLeftX && x <= bottomLeftX + width && 
+						y >= bottomLeftY && y <= bottomLeftY + height) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+
+			jsConsole.writeLine("The point with coordinates X;Y: (" +
+					 x + "; " + y + ") is in the circle and out of rectangle: " + 
+					 (checkInCircle(x, y) && checkOutOfRectangle(x, y)));
+		</script>
+	</body>
+</html>

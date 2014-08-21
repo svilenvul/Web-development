@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Document Object Model - Exercise2 </title>
+</head>
+<body>	
+	<input type="color" id ="color-picker"/>
+	<button onclick="setBackgroundColor()">Set backgroung color</button>
+	<script>
+		//Crеate a function that gets the value of <input type="color"> 
+		//and sets the background of the body to this value
+		
+		function setBackgroundColor() {
+			var input = document.getElementById("color-picker");
+			document.body.style.backgroundColor = input.value;
+		}
+	</script>
+</body>
+</html>

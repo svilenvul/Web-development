@@ -1,0 +1,64 @@
+* {
+	margin : 0px;
+	padding: 0px;
+	color : #e0e0e0 ;
+	font-family : Verdana;
+	}
+header {
+	background-color : rgba(0,0,0,0.86);
+}
+section {
+	display:inline-block;
+	float:left;
+}
+nav {
+	display:inline-block;
+	position : relative;
+	top :0px;
+	width: 200px
+}	
+h3 {
+	font-size:15px;
+}
+h3, button {
+	display:inline-block;
+	background-color : lightgrey;
+	color:rgba(0,0,0,0.86);
+	width : 100%;
+	border : none;
+}
+button {
+	width : 30%;
+	height : 40px;
+	margin:0 auto;
+}
+#wrapper {
+	background-color : rgba(0,0,0,.15);
+}
+#map-container ,#street-view-container{
+	width: 500px;
+	height: 500px;			
+	display : inline-block;
+},
+div.cards-show-expanded {
+	width: 100px;
+	height: 60px;
+}
+.selected {
+	padding-left : 30px;
+	font-weight : 900;
+	color:black;
+}	
+ul {
+	display :table;
+	width : 100%;
+}
+#cities li {
+	display: block;
+	list-style-type : none;
+
+	height : 40px;			
+	background-color : grey;
+	border-top : 1px solid black;
+	vertical-align: middle;
+}

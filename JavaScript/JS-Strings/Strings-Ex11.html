@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Strings-Ex11</title>
+	</head>
+	<body>
+		<label>Type template</label>
+		<textarea id="template">Hello {0}, {1}, {0} text {2}</textarea>
+		<label>Type variables, divided by ( , )</label>
+		<textarea id="variables">Pesho,Gosho,Tosho</textarea>
+		<button onclick="readData()">
+			Print
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that formats a string using placeholders:
+			//var str = stringFormat("Hello {0}!","Peter");
+			//str = "Hello Peter!";
+			
+			
+			function readData () {
+				var template = document.getElementById("template").value;
+				var variables = document.getElementById("variables").value.split(",");
+				
+				jsConsole.writeLine(stringFormat(template,variables));
+			}
+							
+			function stringFormat(string, variables) {
+				var result = string;
+				for (var index = 0; index < variables.length; index++) {
+					var pattern = "\\{" + (index) + "}";
+					var regExp = new RegExp(pattern, 'g');
+					var variable = variables[index];
+					result = result.replace(regExp, variable);
+				}
+				return result;
+			}			
+		</script>
+	</body>
+</html>

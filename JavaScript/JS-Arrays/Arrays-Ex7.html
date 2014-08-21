@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Arrays-Ex7</title>
+	</head>
+	<body>
+		<label>Type numbers in  increasing order, divided by ( , )</label>
+		<input type="text" id="sortedArray" />
+		<label>Type value to be searched</label>
+		<input type="text" id="element" />
+		<button onclick="readData()">
+			Find index
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			// Write a program that finds the index of given element
+			// in a sorted array of integers by using the binary search algorithm
+
+			function readData() {
+				var sortedArrayAsString = document.getElementById("sortedArray").value;
+				var sortedArray = sortedArrayAsString.split(",").map(function(x) {
+					return parseInt(x, 10);
+				});
+				var elementAsString = document.getElementById("element").value;
+				var element = parseInt(elementAsString, 10);
+				
+				jsConsole.writeLine("The element " + element + " is at index: " +
+						binarySearch(sortedArray, element));
+			}
+
+			function binarySearch(sortedArray, element) {
+				var startIndex = 0;
+				var endIndex = sortedArray.length;
+				var midIndex;
+
+				while (startIndex < endIndex) {
+					midIndex = Math.floor((startIndex + endIndex) / 2);
+					if (element > sortedArray[midIndex]) {
+						startIndex = midIndex + 1;
+					} else {
+						endIndex = midIndex;
+					}
+				}
+				if (element == sortedArray[startIndex]) {
+					return startIndex;
+				} else {
+					return "not found";
+				}
+			}
+
+		</script>
+	</body>
+</html>

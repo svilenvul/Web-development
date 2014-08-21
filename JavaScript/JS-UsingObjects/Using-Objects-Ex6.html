@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>Using-Objects-Ex6</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that groups an array of persons by age,
+			// first or last name. The function must return an
+			//associative array, with keys - the groups, and values -arrays
+			// with persons in this groups
+			//Use function overloading (i.e. just one function)
+
+			var persons = [{
+				firstname : "Tosho",
+				lastname : "Toschkov",
+				age : 32
+			}, {
+				firstname : "Gosho",
+				lastname : "Marinov",
+				age : 42
+			}, {
+				firstname : "Petur",
+				lastname : "Petrov",
+				age : 32
+			}, {
+				firstname : "Tosho",
+				lastname : "Minkow",
+				age : 16
+			}, {
+				firstname : "Mincho",
+				lastname : "Minkov",
+				age : 45
+			}, {
+				firstname : "Gosho",
+				lastname : "Petrov",
+				age : 32
+			}, {
+				firstname : "Ivelin",
+				lastname : "Sinigerov",
+				age : 12
+			}, {
+				firstname : "Ivan",
+				lastname : "Ivanov",
+				age : 81
+			}];
+			var sortBy = ["age","firstname","lastname"];
+
+			var group = function(peopleList, sortBy) {
+				var map = new Object();
+				for (var i = 0; i < peopleList.length; i++) {
+					var key = peopleList[i][sortBy];
+					if (!map[key]) {
+						var list = new Array();
+						map[key] = list;
+					}
+					map[key].push(peopleList[i]);
+				}
+				return map;
+			}
+			
+
+			Object.prototype.toString = function toString() {
+				var result = this.firstname + " " + this.lastname + " " + this.age;
+				return result;
+			}
+			for (var i=0; i < sortBy.length; i++) {
+				jsConsole.writeLine("Persons sorted by " +  sortBy[i]);
+				var grouped = group(persons, sortBy[i]);	
+				for (var key in grouped) {
+					jsConsole.writeLine(key + ": " + grouped[key]);
+				}
+				jsConsole.writeLine();
+			}
+			
+		</script>
+	</body>
+</html>

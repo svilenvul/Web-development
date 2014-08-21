@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Conditional-Statements-Ex6</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that enters the coefficients 
+			//a, b and c of a quadratic equation 
+			//and calculates and prints its real roots
+			var a = 4;
+			var b = 9;
+			var c = 3;
+
+			function solveQuadraticEquation(a, b, c) {
+				var D = Math.pow(b, 2) - 4 * a * c;
+				var result = "The equation has no roots.";
+
+				if (D > 0) {
+					var x1 = (-b + Math.sqrt(D)) / (2 * a);
+					var x2 = (-b - Math.sqrt(D)) / (2 * a);
+					result = "The equation has two roots: x\u2081 = " + x1.toFixed(2) + ", x\u2082 = " + x2.toFixed(2);
+				} else if (D === 0) {
+					var x = -b / (2 * a);
+					result = "The equation has one root: x = " + x.toFixed(2);
+				}
+				return result;
+			}
+
+			jsConsole.writeLine(solveQuadraticEquation(a, b, c));
+		</script>
+	</body>
+</html>

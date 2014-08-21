@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Table-Handlebars
+		</title>
+		<style>		
+		</style>
+	</head>
+	<body>
+		<script src="scripts/handlebars-v1.3.0.js"></script>
+		<script id="template-container" type="text/x-handlbar-template">
+		  <table>
+			<thead>
+			  <tr>
+				<td>N</td>
+				<td>Title</td>
+				<td>Start Date</td>
+				<td>End Date</td>
+			  </tr>
+			</thead>
+			<tbody>
+			  {{#each courses}}
+			  <tr>        
+				<td>{{@index}}</td>
+				<td>{{title}}</td>
+				<td>{{startDate}}</td>
+				<td>{{endDate}}</td>      
+			  </tr>
+			  {{/each }}
+			</tbody>
+		  </table>
+		</script>
+		<script src="scripts/table-HandlebarsJS.js"></script>
+	</body>
+</html>

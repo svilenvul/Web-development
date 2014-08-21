@@ -1,0 +1,42 @@
+* {
+	margin : 0 auto;
+	padding : 0px;
+	color : DarkSlateBlue     ;
+	border-radius:10px;
+}
+#wrapper {
+	width:400px;
+	height:650px;
+	background-color:LightSteelBlue ;
+}
+#messages-container{	
+	height : 400px;
+	margin : 0 auto;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	border:1px solid DarkSlateBlue     ;	
+}
+button,textarea,input,footer,#messages-container{
+	width : 80%;
+	background-color:Beige ;
+}
+#control-panel,header,footer,h3,.notification {
+	text-align: center;
+}
+.message {
+	border-bottom:1px solid DarkSlateBlue     ;	
+	width : 80%;
+	padding: 5px;
+}
+.message-text,.message-by {
+	word-wrap:break-word;
+}
+#success {
+	color : blue;
+}
+#error {
+	color: red;	
+}
+h3 {
+	margin-top :20px;	
+}

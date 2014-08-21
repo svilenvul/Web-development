@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Using-Objects-Ex4</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that checks
+			//if a given object contains a given property
+
+			var obj = new Object();
+			var arr = [2,3,4];			
+			var property = "length";			
+			
+			function hasProperty(object, property) {
+				if (object[property] != null) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			jsConsole.writeLine("The object " + obj + " has property " + 
+					property + ": " + hasProperty(obj,property));
+			jsConsole.writeLine("The object " + arr + " has property " + 
+					property + ": " + hasProperty(arr,property));
+			jsConsole.writeLine("The object " + Math + " has property " +
+					property + ": " + hasProperty(Math,property));
+
+		</script>
+	</body>
+</html>

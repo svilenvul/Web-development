@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Loops-Ex1</title>
+
+	</head>
+	<body>
+		<label>Type number</label>
+		<input type="text" id="tb" />
+		<button onclick="readNumberFromTextBox()">
+			Print last digit
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a function that returns the last digit
+			//of given integer as an English word.
+			
+			function readNumberFromTextBox () {
+				var textBoxValue = document.getElementById("tb").value;
+				var number = parseInt(textBoxValue,10);
+				if (isNaN(number)) {
+					jsConsole.writeLine("Please type number");
+				} else {
+					printLastDigit(number);
+				}
+			}
+			
+			function printLastDigit(number) {
+				var lastDigit = number % 10;
+				var result;
+				switch (lastDigit) {
+					case 0:
+						result ="null";
+						break;
+					case 1:
+						result ="one";
+						break;
+					case 2:
+						result ="two";
+						break;
+					case 3:
+						result ="three";
+						break;
+					case 4:
+						result ="four";
+						break;
+					case 5:
+						result ="five";
+						break;
+					case 6:
+						result ="six";
+						break;
+					case 7:
+						result ="seven";
+						break;
+					case 8:
+						result ="eight";
+						break;
+					case 9:
+						result ="nine";
+						break;
+				}
+				jsConsole.writeLine("The last digit of the number is " + result);			
+			}
+			
+		</script>
+	</body>
+</html>

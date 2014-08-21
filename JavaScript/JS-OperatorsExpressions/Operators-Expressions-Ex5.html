@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Operators-Expressions-Ex5</title>
+
+	</head>
+	<body>
+		<div id="js-console"></div>
+
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a boolean expression for finding if the bit 3
+			//(counting from 0) of a given integer is 1 or 0.
+
+			var integer = 39;
+			function checkThirdBitOfInteger(integer) {
+				var temp = integer & 4;
+				if (temp !== 0) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+
+			jsConsole.writeLine("The third bit of the integer "	+
+					 integer + " is: " + checkThirdBitOfInteger(integer));
+		</script>
+	</body>
+</html>

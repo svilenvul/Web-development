@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Loops-Ex1</title>
+
+	</head>
+	<body>
+		<label for="tb">Type digit: <label/>
+		<input type="text" id="tb" />
+		<button onclick="printAllNumbersFromOneToN()">
+			Print loop
+		</button>
+		<div id="js-console"></div>
+		<script src="scripts/js-console.js"></script>
+		<script>
+			//Write a script that prints all the numbers from 1 to N
+			function printAllNumbersFromOneToN() {
+				var n = document.getElementById("tb").value.valueOf();
+				if(isNaN(n) || n < 1) {
+					jsConsole.writeLine("Invalid number!");
+				}
+				for (var i = 1; i <= n; i++) {
+					jsConsole.write(i + " ");
+				}	
+				jsConsole.writeLine("");
+			}
+		</script>
+	</body>
+</html>
