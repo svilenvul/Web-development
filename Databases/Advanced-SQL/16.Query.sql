@@ -1,0 +1,5 @@
+CREATE VIEW UsersLoggedToday AS 
+SELECT UserID,UserName,UserPass,FullName,LoginTime
+FROM Users
+WHERE LoginTime BETWEEN CAST(GETDATE()AS DATE) AND DATEADD(day, 1, CAST(GETDATE()AS DATE))
+

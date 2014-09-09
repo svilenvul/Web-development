@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex3_RetrieveProductCategoriesAndNameOfProducts", "RetrieveProductCategories\Ex3_RetrieveProductCategoriesAndNameOfProducts.csproj", "{0DE60D24-1B96-4674-8AC1-09DA7BA65B53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex2_RetrieveNameAndDescription", "RetrieveNameAndDesc\Ex2_RetrieveNameAndDescription.csproj", "{55F6195E-6117-419C-BB23-E21DA78CF781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex1_Connect", "Connect\Ex1_Connect.csproj", "{178478B9-F3EB-4025-8E18-CAB32BFAF00A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex4_AddProduct", "AddProduct\Ex4_AddProduct.csproj", "{06FF9821-C633-46E7-853C-F2047BB15420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex5_RetrieveImage", "RetrieveImage\Ex5_RetrieveImage.csproj", "{921553E5-83BC-4355-AEF3-DE11FF28DAC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex9_BookStore", "BookStore\Ex9_BookStore.csproj", "{52C01C0D-D784-48DA-9835-8B83C8BBFF8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex10_SqLiteBookStore", "Ex10_SqLiteBookStore\Ex10_SqLiteBookStore.csproj", "{9BE33000-F18B-4E61-A163-6464BB00D1A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DE60D24-1B96-4674-8AC1-09DA7BA65B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE60D24-1B96-4674-8AC1-09DA7BA65B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE60D24-1B96-4674-8AC1-09DA7BA65B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE60D24-1B96-4674-8AC1-09DA7BA65B53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F6195E-6117-419C-BB23-E21DA78CF781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F6195E-6117-419C-BB23-E21DA78CF781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F6195E-6117-419C-BB23-E21DA78CF781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F6195E-6117-419C-BB23-E21DA78CF781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178478B9-F3EB-4025-8E18-CAB32BFAF00A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178478B9-F3EB-4025-8E18-CAB32BFAF00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178478B9-F3EB-4025-8E18-CAB32BFAF00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178478B9-F3EB-4025-8E18-CAB32BFAF00A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FF9821-C633-46E7-853C-F2047BB15420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FF9821-C633-46E7-853C-F2047BB15420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FF9821-C633-46E7-853C-F2047BB15420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FF9821-C633-46E7-853C-F2047BB15420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{921553E5-83BC-4355-AEF3-DE11FF28DAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{921553E5-83BC-4355-AEF3-DE11FF28DAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{921553E5-83BC-4355-AEF3-DE11FF28DAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{921553E5-83BC-4355-AEF3-DE11FF28DAC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C01C0D-D784-48DA-9835-8B83C8BBFF8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C01C0D-D784-48DA-9835-8B83C8BBFF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C01C0D-D784-48DA-9835-8B83C8BBFF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C01C0D-D784-48DA-9835-8B83C8BBFF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE33000-F18B-4E61-A163-6464BB00D1A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE33000-F18B-4E61-A163-6464BB00D1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE33000-F18B-4E61-A163-6464BB00D1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE33000-F18B-4E61-A163-6464BB00D1A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

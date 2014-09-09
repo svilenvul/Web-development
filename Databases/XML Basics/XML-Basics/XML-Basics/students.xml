@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="students.xslt"?>
+
+<students xmlns="studentsSchema.xsd">  
+	<student>
+		<name>Todor Minkov</name>
+		<sex>M</sex>
+		<birthDate>1965-12-12</birthDate>
+		<phone>089745141</phone>
+		<email>todor.kolev@gmail.com</email>
+    <enrolment>
+      <date>2001-12-12</date>   
+    </enrolment>
+		<course>OOP</course>
+		<speciality>Web Developer</speciality>
+		<exam>
+			<name>OOP</name>
+			<tutor>Mincho Medev</tutor>
+			<score>0</score>
+		</exam>
+		<exam>
+			<name>DataStructures</name>
+			<tutor>Mincho Medev</tutor>
+			<score>0</score>
+		</exam>		
+	</student>
+	<student>
+		<name>Velko Tilev</name>
+		<sex>M</sex>
+		<birthDate>1956-01-12</birthDate>
+		<phone>085415141</phone>
+		<email>todor.kolev@gmail.com</email>
+		<course>OOP</course>
+		<speciality>Web Developer</speciality>
+		<exam>
+			<name>OOP</name>
+			<tutor>Mincho Medev</tutor>
+			<score>0</score>
+		</exam>
+		<exam>
+			<name>DataStructures</name>
+			<tutor>Mincho Medev</tutor>
+			<score>0</score>
+		</exam>		
+	</student>
+</students>

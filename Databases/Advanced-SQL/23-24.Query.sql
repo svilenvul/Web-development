@@ -1,0 +1,5 @@
+UPDATE Users SET UserPass = NULL
+WHERE LoginTime < CONVERT(datetime, '2010/10/06 00:00:00', 120)
+
+DELETE FROM Users
+WHERE UserPass IS NULL;

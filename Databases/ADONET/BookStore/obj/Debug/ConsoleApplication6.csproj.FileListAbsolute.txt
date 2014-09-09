@@ -1,0 +1,6 @@
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe.config
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication6\bin\Debug\ConsoleApplication6.exe
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication6\bin\Debug\ConsoleApplication6.pdb
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication6\obj\Debug\ConsoleApplication6.csprojResolveAssemblyReference.cache
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication6\obj\Debug\ConsoleApplication6.exe
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication6\obj\Debug\ConsoleApplication6.pdb

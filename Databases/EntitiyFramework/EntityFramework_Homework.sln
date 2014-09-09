@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex2_DAOCustomers", "Ex2_DAO\Ex2_DAOCustomers.csproj", "{A92B93C1-4817-4BC3-9288-8B51D4BB6FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex1_NorthwindData", "Ex1_NorthwindData\Ex1_NorthwindData.csproj", "{56BA16BD-8602-4741-9A18-16B9A5BC9697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex_3FindCustomersByOrderDateAndShipCity", "Ex_3FindCustomersByOrderDateAndShipCity\Ex_3FindCustomersByOrderDateAndShipCity.csproj", "{81FB4C1F-CBCF-43ED-89AE-1DC174C78BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex_4FindCustomersByOrderDateAndShipCityNative", "Ex4_FindCustomersByOrderDateAndShipCityNative\Ex_4FindCustomersByOrderDateAndShipCityNative.csproj", "{6CEAF178-4D81-4267-89D6-3DF91FAC0777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex5_FindSalesByRegionAndPeroid", "Ex5_FindSalesByRegionAndPeroid\Ex5_FindSalesByRegionAndPeroid.csproj", "{2329ED82-09D5-4FD1-B977-D01C0285BE93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A92B93C1-4817-4BC3-9288-8B51D4BB6FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A92B93C1-4817-4BC3-9288-8B51D4BB6FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A92B93C1-4817-4BC3-9288-8B51D4BB6FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A92B93C1-4817-4BC3-9288-8B51D4BB6FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56BA16BD-8602-4741-9A18-16B9A5BC9697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BA16BD-8602-4741-9A18-16B9A5BC9697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BA16BD-8602-4741-9A18-16B9A5BC9697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BA16BD-8602-4741-9A18-16B9A5BC9697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81FB4C1F-CBCF-43ED-89AE-1DC174C78BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81FB4C1F-CBCF-43ED-89AE-1DC174C78BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81FB4C1F-CBCF-43ED-89AE-1DC174C78BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81FB4C1F-CBCF-43ED-89AE-1DC174C78BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CEAF178-4D81-4267-89D6-3DF91FAC0777}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEAF178-4D81-4267-89D6-3DF91FAC0777}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CEAF178-4D81-4267-89D6-3DF91FAC0777}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CEAF178-4D81-4267-89D6-3DF91FAC0777}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2329ED82-09D5-4FD1-B977-D01C0285BE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2329ED82-09D5-4FD1-B977-D01C0285BE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2329ED82-09D5-4FD1-B977-D01C0285BE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2329ED82-09D5-4FD1-B977-D01C0285BE93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

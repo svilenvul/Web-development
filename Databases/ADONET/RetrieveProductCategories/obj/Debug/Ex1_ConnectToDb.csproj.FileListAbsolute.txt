@@ -1,0 +1,5 @@
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb

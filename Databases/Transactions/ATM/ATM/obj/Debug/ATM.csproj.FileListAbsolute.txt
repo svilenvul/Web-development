@@ -1,0 +1,6 @@
+F:\01 Programirane\01 Telerik\Databases2013\Transactions-homework\ATM\ATM\bin\Debug\ATM.exe.config
+F:\01 Programirane\01 Telerik\Databases2013\Transactions-homework\ATM\ATM\bin\Debug\ATM.exe
+F:\01 Programirane\01 Telerik\Databases2013\Transactions-homework\ATM\ATM\bin\Debug\ATM.pdb
+F:\01 Programirane\01 Telerik\Databases2013\Transactions-homework\ATM\ATM\obj\Debug\ATM.csprojResolveAssemblyReference.cache
+F:\01 Programirane\01 Telerik\Databases2013\Transactions-homework\ATM\ATM\obj\Debug\ATM.exe
+F:\01 Programirane\01 Telerik\Databases2013\Transactions-homework\ATM\ATM\obj\Debug\ATM.pdb

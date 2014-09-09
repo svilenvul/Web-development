@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLSchema1"
+    targetNamespace="students.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema1.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="student">
+    <xs:complexType >
+      <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="birthDate" type="xs:date"/>
+      <xs:element name="phone" type="xs:unsignedInt"/>
+      <xs:element name="email" type="xs:string"/>
+      <xs:element name="enrolment">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="date" type="xs:date"></xs:element>
+            <xs:element name="examScore" type="xs:unsignedInt"></xs:element>
+            <xs:element name="endorsments" type="xs:string"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="specialaty" type="xs:string"/>
+        <xs:element name="exam">
+          <xs:complexType >
+            <xs:sequence>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="tutor" type="xs:string"/>
+              <xs:element name="score" type="xs:unsignedInt"/>
+            </xs:sequence>
+          </xs:complexType >
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType >
+  </xs:element>
+</xs:schema>

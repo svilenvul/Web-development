@@ -1,0 +1,13 @@
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\ClassLibrary2.dll
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\EntityFramework.dll
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\ClassLibrary2.pdb
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\EntityFramework.xml
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\obj\Debug\Ex2_DAOCustomers.csprojResolveAssemblyReference.cache
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

@@ -1,0 +1,10 @@
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\bin\Debug\Ex1_MongoDB_Dictionary.exe.config
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\bin\Debug\Ex1_MongoDB_Dictionary.exe
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\bin\Debug\Ex1_MongoDB_Dictionary.pdb
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\bin\Debug\MongoDB.Bson.dll
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\bin\Debug\MongoDB.Driver.dll
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\bin\Debug\MongoDB.Bson.xml
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\bin\Debug\MongoDB.Driver.xml
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\obj\Debug\Ex1_MongoDB_Dictionary.csprojResolveAssemblyReference.cache
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\obj\Debug\Ex1_MongoDB_Dictionary.exe
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex1_MongoDB_Dictionary\Ex1_MongoDB_Dictionary\obj\Debug\Ex1_MongoDB_Dictionary.pdb

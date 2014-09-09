@@ -1,0 +1,13 @@
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\Ex2_Redis_Dictionary.exe.config
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\obj\Debug\Ex2_Redis_Dictionary.csprojResolveAssemblyReference.cache
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\Ex2_Redis_Dictionary.exe
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\Ex2_Redis_Dictionary.pdb
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\ServiceStack.Common.dll
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\ServiceStack.Interfaces.dll
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\ServiceStack.Redis.dll
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\ServiceStack.Text.dll
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\ServiceStack.Common.xml
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\ServiceStack.Redis.xml
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\bin\Debug\ServiceStack.Text.xml
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\obj\Debug\Ex2_Redis_Dictionary.exe
+F:\01 Programirane\01 Telerik\Databases2013\NoSql-homework\Ex2_Redis_Dictionary\Ex2_Redis_Dictionary\obj\Debug\Ex2_Redis_Dictionary.pdb

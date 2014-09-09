@@ -1,0 +1,25 @@
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ClassLibrary2.dll
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\EntityFramework.dll
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ClassLibrary2.pdb
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\EntityFramework.xml
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe.config
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\obj\Debug\ConsoleApplication4.exe
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\obj\Debug\ConsoleApplication4.pdb
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ClassLibrary2.dll
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\EntityFramework.dll
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\ClassLibrary2.pdb
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\bin\Debug\EntityFramework.xml
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\ConsoleApplication4\obj\Debug\Ex_4FindCustomersByOrderDateAndShipCityNative.csprojResolveAssemblyReference.cache
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\Ex4_FindCustomersByOrderDateAndShipCityNative\bin\Debug\ConsoleApplication4.exe.config
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\Ex4_FindCustomersByOrderDateAndShipCityNative\obj\Debug\ConsoleApplication4.exe
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\EntiityFramework-Homework\Ex4_FindCustomersByOrderDateAndShipCityNative\obj\Debug\ConsoleApplication4.pdb
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\Ex4_FindCustomersByOrderDateAndShipCityNative\bin\Debug\ConsoleApplication4.exe.config
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\Ex4_FindCustomersByOrderDateAndShipCityNative\obj\Debug\ConsoleApplication4.exe
+D:\Archive 18.08.14\01 Programirane\01 Telerik\Databases2013\00.Homewor\EntitiyFramework\Ex4_FindCustomersByOrderDateAndShipCityNative\obj\Debug\ConsoleApplication4.pdb

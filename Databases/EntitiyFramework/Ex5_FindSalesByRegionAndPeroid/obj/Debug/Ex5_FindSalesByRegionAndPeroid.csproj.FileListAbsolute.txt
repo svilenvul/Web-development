@@ -1,0 +1,9 @@
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\bin\Debug\Ex5_FindSalesByRegionAndPeroid.exe.config
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\bin\Debug\Ex5_FindSalesByRegionAndPeroid.exe
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\bin\Debug\Ex5_FindSalesByRegionAndPeroid.pdb
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\bin\Debug\ClassLibrary2.dll
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\bin\Debug\EntityFramework.dll
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\bin\Debug\ClassLibrary2.pdb
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\bin\Debug\EntityFramework.xml
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\obj\Debug\Ex5_FindSalesByRegionAndPeroid.exe
+F:\01 Programirane\01 Telerik\Databases2013\EntitiyFramework-Homework\EntiityFramework-Homework\Ex5_FindSalesByRegionAndPeroid\obj\Debug\Ex5_FindSalesByRegionAndPeroid.pdb

@@ -1,0 +1,6 @@
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe.config
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication5\bin\Debug\ConsoleApplication5.exe
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication5\bin\Debug\ConsoleApplication5.pdb
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication5\obj\Debug\ConsoleApplication5.exe
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication5\obj\Debug\ConsoleApplication5.pdb
+F:\01 Programirane\01 Telerik\quality code\ConsoleApplication2\ConsoleApplication5\obj\Debug\Ex5_RetrieveImage.csprojResolveAssemblyReference.cache
