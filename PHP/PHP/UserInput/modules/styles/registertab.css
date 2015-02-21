@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+section form label,input {
+	display : inline-block;
+	width : 48%;
+	float : left;
+	height : 15px;
+	margin-top: 5px;
+}
+section form label {
+	float : left;
+}
+section form input {
+	float : right;
+}

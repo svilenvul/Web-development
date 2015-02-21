@@ -1,0 +1,197 @@
+@import "../stylesheets/_bootstrap.scss";
+
+body {
+    @extend .container;
+    & > header {
+        @extend .navbar ;
+        @extend .navbar-default;
+        & > nav {
+            @extend .container-fluid;
+            div.nav-mobile {
+                @extend .navbar-header;
+
+                #nav-button {
+                    @extend .navbar-toggle;
+                }
+            }
+            div.nav-desktop {
+                @extend .navbar-collapse;
+                @extend .collapse;
+                & > ul{                   
+                    @extend .nav;
+                    @extend .navbar-nav;                   
+                }
+                & > ul#float-right {
+                    @extend .navbar-right;
+                }  
+                form {
+                    input {
+                        @extend .btn;
+                        @extend .btn-default;
+                        @extend .navbar-btn;
+                    }
+                    div {
+                        display: inline;
+                        @extend .form-group;
+                    }
+                }
+                #nav-text {
+                    @extend .navbar-text;
+                }
+                #dropdown {
+                    @extend .dropdown;
+                }
+                #dropdown-btn {
+                    @extend .dropdown-toggle;
+                }
+                #dropdown-menu {
+                    @extend .dropdown-menu;
+                }
+            }
+        }
+    }
+    section {
+
+        & > div.wrapper {
+            @extend .col-md-6;
+            @extend .clearfix;
+
+            p {
+                @extend .row;
+                strong {
+                    @extend .col-sm-6;
+                }
+                span {
+                    @extend .col-sm-6;
+                }
+            }
+            div.ctrl-panel {
+                @extend .btn-group;
+                @extend .btn-group-justified;
+                a {
+                    @extend .btn;
+                    @extend .btn-default;
+                }
+                input {
+                    @extend .form-control;
+                }
+            }
+            div.img-panel {
+                @extend .thumbnail;     
+                img {
+                    @extend .img-responsive;
+                }
+            }
+
+        }
+    }
+    section#profile-tab {
+        div.img-panel {
+            @extend .thumbnail;
+            @extend .col-sm-4;
+            @extend .col-xs-6;
+        }
+        div.info-panel {
+            @extend .col-sm-8;
+            @extend .col-xs-6;
+        } 
+    }
+    section#cars {
+        ul {
+            li {                
+                @extend .col-md-6;
+                div.img-panel { 
+                    @extend .col-md-12;
+                    @extend .col-sm-4;
+                }
+                div.info-panel {
+                    @extend .col-md-12;
+                    @extend .col-sm-8;
+                }
+            }           
+        }
+    }
+
+    section#userlist,section#workmanlist {
+        a {
+            @extend .row;
+            div.general-info {                
+                & > li {
+                    @extend .col-md-2;
+                    @extend .col-sm-4;
+                }
+                 & > li:first-child {
+                    @extend .col-md-1;
+                    @extend .col-sm-2;
+                }
+                
+            }
+            div.cars {
+                & > li {
+                    @extend .col-md-3;
+                    @extend .col-sm-6;
+                    div.car {
+                        @extend .row;
+                        .img-panel{
+                            @extend .col-sm-5;
+                                                    }
+                        .info-panel{
+                            @extend .col-sm-7;
+                        }
+                    }
+                }
+            } 
+        }
+
+    }
+    section#login,section#register,section#update {
+        form {
+            @extend .form-horizontal;
+            div {
+                @extend .form-group;
+                label {
+                    @extend .col-md-4;
+                }
+                input {
+                    @extend .col-md-4;        
+                }
+                input[type="submit"] {
+                    @extend .btn;
+                    @extend .btn-primary;
+                    @extend .col-md-offset-4;
+                }
+                input[type="radio"],input[type="checkbox"] {
+                    @extend .col-md-1;
+                }
+            }
+        }
+        p.error {
+            @extend .text-danger;
+        }
+    }
+
+}
+
+button {
+    @extend .btn; 
+    @extend .btn-default;
+}
+
+img {
+    @extend .img-responsive;
+}
+
+ul.list {
+    @extend .list-group;
+    @extend .list-unstyled;
+    & > a {
+        @extend .list-group-item; 
+    }
+}
+.float-right {
+    @extend .pull-right;
+}
+
+.my-hidden {
+    display: none;
+}
