@@ -451,3 +451,130 @@ input#fg_selected_box{
     background-color: #65c25e;
     color: #ffffff;
 }
+
+.fg_logo h2 {
+padding-top: 20px;
+}
+div.fg_logo {
+position: relative;
+height: 50px;
+}
+img.extensionimage {
+position: absolute;
+top: 0;
+left: 300px;
+}
+a.anchorEx1 {
+color: transparent;
+background: transparent;
+width: 41px;
+height: 46px;
+position: absolute;
+top: 7px;
+left: 475px;
+cursor: pointer;
+outline: 0;
+}
+a.anchorEx2 {
+color: transparent;
+background: transparent;
+width: 41px;
+height: 46px;
+position: absolute;
+top: 7px;
+left: 522px;
+cursor: pointer;
+outline: 0;
+}
+a.anchorEx3 {
+color: transparent;
+background: transparent;
+width: 41px;
+height: 46px;
+position: absolute;
+top: 7px;
+left: 569px;
+cursor: pointer;
+outline: 0;
+}
+a.anchorEx4 {
+color: transparent;
+background: transparent;
+width: 114px;
+height: 20px;
+position: absolute;
+top: 21px;
+left: 635px;
+cursor: pointer;
+outline: 0;
+}
+a.anchorEx1:hover, a.anchorEx2:hover, a.anchorEx3:hover, a.anchorEx4:hover{
+cursor: pointer;
+}
+h2.heading {
+margin: 25px 0 0 0;
+}
+h4.heading {
+margin: 10px 0 20px 0;
+}
+hr {
+margin-bottom: 26px;
+}
+.block-content {
+border: 1px solid #CDCDCD;;
+padding: 5px;
+background: white;
+display: inline-block;
+margin-bottom: 10px;
+width: 900px;
+}
+.block-left {
+float: left;
+width: 88px;
+height: 66px;
+}
+.block-right {
+float: left;
+position: relative;
+padding-left: 8px;
+width: 88%;
+}
+a.view {
+background: #458829;
+color: white;
+padding: 4px 10px;
+text-decoration: none;
+font-weight: 700;
+border-radius: 3px;
+position: absolute;
+top: 20px;
+right: 20px;
+outline: 0;
+border: 1px solid #337C14;
+font-size: 14px;
+}
+a.view:hover, a.view:active, a.view:focus{
+    color: #fff !important;
+    outline: 0 !important;
+}
+.block-right h3, p{
+margin:0;
+}
+.block-right h3 {
+padding-top: 2px;
+}
+p.details {
+margin: 0;
+width: 75%;
+margin-top: 3px;
+font-size: 14px;
+}
+
+a:active,
+a:focus,
+input:focus,
+input:active { 
+    -moz-outline-style: none !important;
+    outline:none !important;
+    outline: 0 !important;
+}

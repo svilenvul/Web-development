@@ -29,6 +29,20 @@ function blackbird_wp_enqueue_scripts() {
 
 add_action('wp_enqueue_scripts', 'blackbird_wp_enqueue_scripts');
 
+/* ----------------------------------------------------------------------------------- */
+/* Styles Enqueue */
+/* ----------------------------------------------------------------------------------- */
+
+function blackbird_add_stylesheet() {
+    if (!is_admin()) {
+        wp_enqueue_style('blackbird_stylesheet', get_template_directory_uri() . "/style.css", '', '', 'all');
+    } elseif (is_admin()) {
+        
+    }
+}
+
+add_action('init', 'blackbird_add_stylesheet');
+
 function blackbird_get_option($name) {
     $options = get_option('blackbird_options');
     if (isset($options[$name]))

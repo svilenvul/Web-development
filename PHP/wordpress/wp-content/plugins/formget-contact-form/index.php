@@ -3,7 +3,7 @@
   Plugin Name: FormGet Contact Form
   Plugin URI: http://www.formget.com
   Description: FormGet Contact Form is an eassy and effective form builder tool which enable you to bulid and embed form on your website in few steps. With FormGet Contact Form manage all your contact forms and your entire client communication at one single place.
-  Version: 5.2
+  Version: 5.3
   Author: FormGet
   Author URI: http://www.formget.com
  */
@@ -72,7 +72,51 @@ add_action('admin_menu', 'cf_menu_page');
 
 function cf_menu_page() {
     add_menu_page('cf', 'Contact Form', 'manage_options', 'cf_page', 'cf_setting_page', plugins_url('image/favicon.ico', __FILE__), 109);
+	add_submenu_page('cf_page', 'Extension', 'Extension', 'manage_options', 'cf_submenu_page', 'cf_submenu_dashboard');
 }
+
+function cf_submenu_dashboard() {
+    echo "<h2 class='heading'>FormGet Powerful Extension</h2><h4 class='heading'>Extensions that simplify your work.</h4><hr/>";
+    echo extension_list();
+    
+}
+
+function extension_list() {
+    $extensions=array(
+        array('img_path'=>plugins_url("image/bundle.png", __FILE__),
+               'ext_title'=>'FormGet Extensions Bundle',
+               'ext_desc'=>'Extensions bundle gives you access to all FormGet extensions at one single price. This extension bundle includes more than 30 different extensions and several integration.',
+                'ext_url'=>'http://www.formget.com/app/extension/fg_extension/all-1'),
+        array('img_path'=>plugins_url("image/custom.png", __FILE__),
+               'ext_title'=>'Custom Branding',
+               'ext_desc'=>'This extensions allows you to remove and edit any FormGet branding from your forms. It allows you to quickly transform your FormGet form into your own branded form.',
+                'ext_url'=>'http://www.formget.com/app/single_extension/pricing/formcapabilities-custombranding'),
+        array('img_path'=>plugins_url("image/paypal.png", __FILE__),
+               'ext_title'=>'PayPal',
+               'ext_desc'=>'The PayPal Extension helps you to collect online payments through your forms. It accept credit card payments through forms instantly.',
+                'ext_url'=>'http://www.formget.com/app/single_extension/pricing/payment-paypal'),
+        array('img_path'=>plugins_url("image/email.png", __FILE__),
+               'ext_title'=>'Email Notification',
+               'ext_desc'=>'With this extension whenever a user fills out the form you will recieve an email notification notifying you about the form submission. This way you wont miss any of the form entries.',
+                'ext_url'=>'http://www.formget.com/app/single_extension/pricing/notification-emailnotification')     
+    );
+    $list='';
+    foreach($extensions as $extension){
+        
+    $list .="<div class='block-content'>
+		<div class='block-left'><img src='".$extension['img_path']."' class='entension-image'></div>
+		<div class='block-right'>
+			<h3>".$extension['ext_title']."</h3>
+			<a href='".$extension['ext_url']."' target='_blank' class='view'>View Extension</a>
+			<p class='details'>".$extension['ext_desc']."</p>	
+		</div>
+	</div>";
+            
+    }
+    return $list;
+}
+
+
 
 function cf_setting_page() {
     $url = plugins_url();
@@ -103,7 +147,12 @@ function cf_setting_page() {
          <form id="fg_ofform" action="" method="POST">
             <div id="fg_header">
                 <div class="fg_logo">
-                    <h2> FormGet Contact Form</h2>
+                   <h2> FormGet Contact Form</h2>
+                    <img src="<?php echo plugins_url('image/extension.jpg', __FILE__); ?>" class="extensionimage" alt="Extension" />
+                    <a href="http://www.formget.com/app/single_extension/pricing/formcapabilities-custombranding" target="_blank" class="anchorEx1"></a>
+                    <a href="http://www.formget.com/app/single_extension/pricing/payment-paypal" target="_blank" class="anchorEx2"></a>
+                    <a href="http://www.formget.com/app/single_extension/pricing/notification-emailnotification" target="_blank" class="anchorEx3"></a>
+                    <a href="http://www.formget.com/app/extension/fg_extension/all-1" target="_blank" class="anchorEx4"></a>
                 </div>
                 <a target="#">
                     <div class="fg_icon-option"> </div>

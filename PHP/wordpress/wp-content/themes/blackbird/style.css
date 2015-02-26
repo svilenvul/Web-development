@@ -4,14 +4,14 @@ Theme URI: http://www.inkthemes.com/blackbird-wordpress-org/
 Description: Blackbird is a Uniquely Designed, Professional, Responsive and beautiful Theme with Easy Customization Options built by InkThemes.com. The Customization Options includes using your own Logos, Analytics and your own Custom Feature Texts that can be tweaked easily using Theme Options Panel. BlackBird Theme comes with a Single Click Intall feature, Just press activate button and your website will get ready with all the dummy content. Just set the content from the Themes Options Panel and you are ready to go. BlackBird by InkThemes.com is suitable for any business or personal website. The Theme can work for various different niches. It includes great style for Blog pages as well.
 Author: InkThemes.com
 Author URI: http://www.inkthemes.com
-Version: 1.2.2
+Version: 1.2.3
 License: GNU General Public License
 License URI: license.txt
 Tags:two-columns, responsive-layout, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
 */
 @import url(css/reset.css);
 @import url(css/960_24_col_responsive.css);
-@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+@import url(https://fonts.googleapis.com/css?family=Rokkitt);
 body {
     font-family: "Trebuchet MS";
     font-size:13px;
@@ -65,6 +65,11 @@ h2.site-description {
 .header {
     max-width:100%;
 }
+.logo img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
 .header .logo {
     margin-top:40px;
 }
@@ -88,6 +93,7 @@ header .logo img {
 .call-us {
     margin-top:0;
     padding-bottom:4px;
+    margin-right: 3px;
 }
 .header .logo h2{
     margin-bottom: 0px;
@@ -250,25 +256,7 @@ header .logo img {
 * html .ddsmoothmenu {
     height: 1%;
 }
-.downarrowclass {
-    display:block;
-    position: absolute;
-    width:0;
-    height:0;
-    overflow:hidden;
-    top: 0;
-    right: 0;
-    display:none !important;
-}
-.rightarrowclass {
-    display:block;
-    width:5px;
-    height:7px;
-    position: absolute;
-    margin-top:-3px;
-    top: 50%;
-    right: 8px;
-}
+
 /* ######### CSS for shadow added to sub menus  ######### */
 
 .ddshadow {
@@ -280,21 +268,191 @@ header .logo img {
     display:none;
 }
 /* ---- menu ---- */
-
-#menu li.current-menu-parent a, #menu li.current_page_parent a, #menu li a.selected, #menu li a:hover {
+.mobieMenu {
+    margin:0 auto;
+    width:70%;
+    margin-top:12px;
+    text-align:center;
+    margin-left:70px;
+}
+.menu_wrapper {
+    background:#343434 url(images/menubg.png) repeat-x;
+    margin-top:20px;
+    height: 54px;
+}
+#menu {
+    position:relative;
+    z-index:999;
+    margin-left:-10px;
+}
+#menu li {
+    list-style-type:none;
+    margin-left:0;
+}
+#menu li a {
+    font-size:15px;
+    line-height:23px;
+    font-family: 'Abel', sans-serif;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:12px 10px 21px 10px;
+    position:relative;
+    float:left;
+    color:#bbb;
+    text-align:center;
+    text-decoration:none;
+    text-shadow:0 1px 1px #04406b;
+}
+#menu li.current-menu-item a, #menu li.current_page_item a, #menu li.current-menu-parent a, #menu li.current_page_parent a, #menu li a.selected, #menu li a:hover {
+    margin:0;    
+    color:#fff;
+}
+#menu li.current-menu-item {
+}
+#menu li.current-menu-item a {
+    color:#fff;
+}
+#menu li li a, #menu li li a.selected, #menu li li a:hover {
+    background-color:#f8ca23;
     color:#fff;
 }
 #menu li.current-menu-item a:hover, #menu li.current-menu-parent a:hover, #menu li.current_page_parent a:hover, #menu li a:hover.selected {
+    text-decoration:none;
+}
+#menu .ddsmoothmenu {
+    margin:0;
+    padding:0;
+    list-style:none;
+    position:relative;
+    margin-top:5px;
+    margin-left:7px;
+    margin-bottom:0;
+    text-transform:capitalize;
+}
+#menu .ddsmoothmenu li > ul {
+    margin-left:15px;
+    position: absolute;
+    left: 0;
+    display: none;
+    visibility: hidden;
+    border-radius:5px;
+    margin-top:0px;
+    background:#343434;
+}
+#menu .ddsmoothmenu li > ul li > ul {
+    margin-top:1px;
+    margin-left:0;
+}
+#menu .ddsmoothmenu li {
+    margin:0 !important;
+    position: relative;
+    display: inline;
+    float: left;
+    padding-left:10px;
     color:#fff;
 }
 #menu .ddsmoothmenu li li {
+    font-size:12px;
+    text-transform:capitalize;
+    margin:10px;
+    padding:0px 0;
     color:#fff;
 }
-#menu li.current_page_item a {
-    color:#fff;
+#menu .ddsmoothmenu li li a {
+    width: 140px;
+    height:auto;
+    float:none;
+    display: block;
+    text-align:left;
+    text-shadow:none;
+    margin:0;
+    padding:8px 18px;
+    text-decoration: none;
+    position:relative;
+    font-size:13px;
+    background:url(images/menusep.png) bottom repeat-x;
 }
-#menu .ddsmoothmenu li li:last-child a {
+#menu .ddsmoothmenu li li a:after {
+    width:100%;
+    content: '';
+    position:absolute;
+    left:0;
+    top:0;
+}
+#menu .ddsmoothmenu li li li li:last-child a, #menu .ddsmoothmenu li li li li:last-child a:after {
+    border-top:none;
+    background-image:none;
+}
+#menu .ddsmoothmenu li li:last-child a:after {
+    width:100%;
+    content: '';
+    position:absolute;
+    left:0;
+    bottom:0;
+    border-radius:5px;
+    color:#000;
     background:none;
+    background-image:none;
+}
+* html #menu .ddsmoothmenu li li a {
+    display: inline-block;
+}
+#menu .ddsmoothmenu li li a:link, #menu .ddsmoothmenu li li a:visited {
+    color: #fff;
+}
+#menu .ddsmoothmenu li li a.selected, #menu .ddsmoothmenu li li a:hover {
+    color: #A8A8A8;
+}
+#menu .ddsmoothmenu li ul li {
+    display: list-item;
+    float: none;
+}
+#menu .ddsmoothmenu li ul li ul {
+    margin-top:0px;
+    padding-top:0;
+    color:#fff;
+    top: 0;
+}
+#menu .ddsmoothmenu li ul li ul li {
+    margin-top:-2px;
+}
+* html .ddsmoothmenu {
+    height: 1%;
+}
+li.menu-item-has-children:hover .downarrowclass {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 5px;
+    overflow: hidden;
+    right: 50%;
+    bottom: 2px;
+    background: url(images/menutip.png) bottom center no-repeat;
+}
+.rightarrowclass {
+    display:block;
+    width:5px;
+    height:7px;
+    position: absolute;
+    margin-top:-3px;
+    top: 50%;
+    right: 8px;
+}
+ul.sub-menu li:last-child a, 
+ul.sub-menu li ul.sub-menu li:last-child a, 
+ul.sub-menu li ul.sub-menu li ul.sub-menu li:last-child a, 
+ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li:last-child a,
+ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li:last-child a,
+ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li:last-child a{
+    background: none !important;
+}
+ul.sub-menu li ul.sub-menu li a, 
+ul.sub-menu li ul.sub-menu li ul.sub-menu li a, 
+ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li a,
+ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li a,
+ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li a,
+ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li ul.sub-menu li a{
+    background:url(images/menusep.png) bottom repeat-x !important;
 }
 /* top search 
 =======================================*/
@@ -421,7 +579,8 @@ html[xmlns] .slides {
     color: #fafafa;
     font-size: 13px;
     line-height: 18px;
-    width:224px;
+    width:305px;
+    text-align: justify;
     height:auto;
     border-radius:10px;
     overflow:hidden;
@@ -434,7 +593,6 @@ html[xmlns] .slides {
 }
 .flex-caption h1 {
     margin-bottom:10px;
-    width:200px;
     margin-left:15px;
     margin-right:15px;
     margin-top:15px;
@@ -446,7 +604,6 @@ html[xmlns] .slides {
     text-transform:uppercase;
 }
 .flex-caption p {
-    width:200px;
     margin-left:15px;
     margin-right:15px;
     margin-bottom: 15px;
@@ -558,7 +715,7 @@ html[xmlns] .slides {
 
 .feature-content {
     text-align:center;
-    margin-top:60px;
+    margin-top:45px;
     overflow:hidden;
     max-width:100%;
 }
@@ -597,7 +754,7 @@ h1.ftitle {
 }
 .feature-content-inner p {
     color:#717273;
-    font-size:13px;
+    font-size:14px;
     text-align:center;
     width:100%;
 }
@@ -616,6 +773,7 @@ h1.ftitle {
     background:#f3cc0c;
     margin-left:45px;
     display:block;
+    margin-bottom: 28px;
 }
 .feature-content-inner .circle img {
     width:142px;
@@ -646,13 +804,15 @@ h1.ftitle {
     font-size:16px;
     margin-top:25px;
     display:block;
-    -webkit-transition:all 0.6s linear;
-    -moz-transition:all 0.6s linear;
-    -o-transition:all 0.6s linear;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
 }
 .feature-content .read-more:hover {
-    opacity:0.5;
-    color:#f8ca23;
+    opacity:0.8;
+    font-weight: bold;
+    color:black;
+    background:url(images/readmoreyellow.png) center no-repeat;
 }
 /*testimonial
 =============================================*/
@@ -1129,13 +1289,14 @@ ol.commentlist li.comment ul.children {
     font-size:22px;
     color:#000;
     font-weight:bold;
-    padding:10px 10px;
+    padding: 10px 10px 10px 0;
 }
 #commentform {
     margin-bottom:50px;
 }
 #commentform p {
     color:#444;
+    margin: 5px 0px;
 }
 #commentform a {
     color:#0454A8;
@@ -1145,7 +1306,7 @@ ol.commentlist li.comment ul.children {
 #respond label {
     display:block;
     margin-right:15px;
-    margin-bottom:5px;
+    margin-bottom:8px;
     color:#9b9494;
 }
 #respond .required {
@@ -1154,15 +1315,22 @@ ol.commentlist li.comment ul.children {
     font-size:10px;
 }
 #respond input {
+    font-weight: bold;
     border:none;
-    color:#989898;
+    color:#B2B2B2;
     background:#000;
     font-size:13px;
     padding:8px 10px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
 }
 #respond .required {
     display:none;
+}
+#commentform p.form-allowed-tags{
+    margin: 20px 0;
 }
 /* Commentform Style
 -------------------------------------------------------*/
@@ -1215,6 +1383,15 @@ textarea#comment {
     float: right;
     text-align: right;
     width: 50%;
+}
+input#submit:hover {
+    background: #dfbb39 !important;
+    opacity: 0.8;
+    font-weight: bold;
+    color: black;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
 }
 /*Sidebar 
 ====================================================*/
@@ -1560,15 +1737,22 @@ ul.Social-links li a:hover {
 }
 .footer_bottom .footer_bottom_inner span.copyright {
     float:right;
-    color:#9f9e9e;
     margin-top:15px;
     margin-bottom:15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888888;
+}
+.footer_bottom .footer_bottom_inner span.copyright a {
+    color: #888888;
 }
 .footer_bottom .footer_bottom_inner span.blog-desc {
     float:left;
-    color:#4d4c4c;
     margin-top:15px;
     margin-bottom:15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #888888;
 }
 /* #Special Columns
 ================================================== */
@@ -1886,6 +2070,12 @@ a img.aligncenter {
     transform: rotate(-180deg);
 }
 /* Media screen */
+@media only screen and (min-width: 961px) {
+    .footer .grid_12 .widget_inner{
+        padding-right: 38px;
+    } 
+}
+
 @media only screen and (min-width: 768px) and (max-width: 960px) {
     .top-search {
         height:0px;
@@ -1970,6 +2160,9 @@ a img.aligncenter {
         max-width:498px;
         height:auto;
     }
+    .footer .grid_12 .widget_inner{
+        padding-right: 38px;
+    } 
 }
 @media only screen and (max-width: 767px) {
     .top-search {
@@ -2360,4 +2553,4 @@ a img.aligncenter {
 }
 h2.feature-content-inner-heading {
     line-height: 35px;
-    }
+}

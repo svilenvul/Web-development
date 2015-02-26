@@ -1,6 +1,14 @@
 == Changelog ==
 = Theme Name: Blackbird Theme Pro=
 
+= Version: 1.2.3 =
+* Changes in menu styling.
+* Translation function calls must NOT contain PHP variables, Issue fixed.
+* Possible hard-coded links were found,issue fixed.
+* Added readme.txt file
+* Text wrapped issue fixed.
+* Change screenshot.png.
+
 = Version: 1.2.2 =
 * Added slider and feature boxes
 * Miner change in style.css

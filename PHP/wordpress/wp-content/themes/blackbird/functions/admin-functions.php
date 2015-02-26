@@ -77,11 +77,11 @@ function optionsframework_admin_head() {
     //Tweaked the message on theme activate
     ?>
     <script type="text/javascript">
-        jQuery(function(){
-            	
-            var message = '<p>This theme comes with an <a href="<?php echo admin_url('admin.php?page=optionsframework'); ?>">options panel</a> to configure settings. This theme also supports widgets, please visit the <a href="<?php echo admin_url('widgets.php'); ?>">widgets settings page</a> to configure them.</p>';
+        jQuery(function () {
+
+            var message = '<p><?php _e('This theme comes with an ', 'black-bird'); ?><a href="<?php echo admin_url('admin.php?page = optionsframework'); ?>"><?php _e('options panel', 'black-bird'); ?></a><?php _e(' to configure settings. This theme also supports widgets, please visit the ', 'black-bird'); ?><a href="<?php echo admin_url('widgets.php'); ?>"><?php _e('widgets settings page</a> to configure them.', 'black-bird'); ?></p>';
             jQuery('.themes-php #message2').html(message);
-            
+
         });
     </script>
     <?php

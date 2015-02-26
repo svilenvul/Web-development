@@ -20,7 +20,7 @@
     <div class="container_24">
         <div class="grid_24">
             <div class="footer_bottom_inner"> 
-                <span class="blog-desc">				
+                <span class="blog-desc"><?php $theme_link = 'http://www.inkthemes.com'; ?>				
                     <?php echo get_bloginfo('title'); ?>
                     -
                     <?php echo get_bloginfo('description'); ?>
@@ -28,8 +28,8 @@
                 <?php if (blackbird_get_option('blackbird_footertext') != '') { ?>
                     <span class="copyright"><?php echo blackbird_get_option('blackbird_footertext'); ?></span> 
                 <?php } else { ?>
-                    <span class="copyright"><a href="http://www.inkthemes.com"><?php _e('BlackBird Theme by InkThemes.com', 'black-bird'); ?></a></span>
-                <?php } ?>			
+                    <span class="copyright"><a href="<?php echo esc_url($theme_link); ?>" target="_blank"><?php _e('BlackBird Theme by InkThemes.com', 'black-bird'); ?></a></span>
+                    <?php } ?>			
             </div>
         </div>
     </div>

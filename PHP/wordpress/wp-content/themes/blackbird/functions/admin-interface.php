@@ -20,7 +20,7 @@ function blackbird_optionsframework_add_admin() {
             die;
         }
     }
-    $of_page = add_theme_page($themename, 'Theme Options', 'edit_theme_options', 'optionsframework', 'blackbird_optionsframework_options_page', 'div');
+    $of_page = add_theme_page($themename, __('Theme Options', 'black-bird'), 'edit_theme_options', 'optionsframework', 'blackbird_optionsframework_options_page', 'div');
 
     // Add framework functionaily to the head individually
     add_action("admin_print_scripts-$of_page", 'blackbird_load_only');
@@ -79,37 +79,38 @@ function blackbird_optionsframework_options_page() {
     $themename = blackbird_get_option('of_themename');
     ?>
     <div class="trail-notify">
-        <h1><?php _e('Get BlackBird Theme PRO!','black-bird'); ?></h1>
-        <p><?php _e('You are Using the Lite Version of BlackBird Theme. Upgrade to Pro for extra features like Home Page Slider, Contact Page Template, Gallery Page Template, FullWidth Page Template, Multiple Color Options and much more.</p>
-        <a href="http://www.inkthemes.com/wp-themes/blackbird-responsive-wordpress-theme/" target="blank">Upgrade to Black Bird Theme PRO Now >>','black-bird'); ?></a>
+        <?php $pro_theme = 'http://www.inkthemes.com/wp-themes/blackbird-responsive-wordpress-theme/'; ?>
+        <h1><?php _e('Get BlackBird Theme PRO!', 'black-bird'); ?></h1>
+        <p><?php _e('You are Using the Lite Version of BlackBird Theme. Upgrade to Pro for extra features like Home Page Slider, Contact Page Template, Gallery Page Template, FullWidth Page Template, Multiple Color Options and much more.', 'black-bird'); ?></p>
+        <a href="<?php echo esc_url($pro_theme); ?>" target="blank"><?php _e('Upgrade to Black Bird Theme PRO Now >>', 'black-bird'); ?></a>
     </div>
 
     <div class="wrap" id="of_container">
         <div id="of-popup-save" class="of-save-popup">
-            <div class="of-save-save"><?php _e('Options Updated','black-bird'); ?></div>
+            <div class="of-save-save"><?php _e('Options Updated', 'black-bird'); ?></div>
         </div>
         <div id="of-popup-reset" class="of-save-popup">
-            <div class="of-save-reset"><?php _e('Options Reset','black-bird'); ?></div>
+            <div class="of-save-reset"><?php _e('Options Reset', 'black-bird'); ?></div>
         </div>
         <form action="" enctype="multipart/form-data" id="ofform">
-    <?php wp_nonce_field('theme-update-option'); ?>
+            <?php wp_nonce_field('theme-update-option'); ?>
             <div id="header">
                 <div class="logo">
-                    <h2><?php _e('BlackBird Theme Options','black-bird'); ?></h2>
+                    <h2><?php _e('BlackBird Theme Options', 'black-bird'); ?></h2>
                 </div>
                 <a href="http://www.inkthemes.com" target="_new">
                     <div class="icon-option"> </div>
                 </a>
                 <div class="clear"></div>
             </div>
-    <?php
-    // Rev up the Options Machine
-    $return = blackbird_optionsframework_machine($options);
-    ?>
+            <?php
+            // Rev up the Options Machine
+            $return = blackbird_optionsframework_machine($options);
+            ?>
             <div id="main">
                 <div id="of-nav">
                     <ul>
-    <?php echo $return[1] ?>
+                        <?php echo $return[1] ?>
                     </ul>
                 </div>
                 <div id="content"> <?php echo $return[0]; /* Settings */ ?> </div>
@@ -117,12 +118,12 @@ function blackbird_optionsframework_options_page() {
             </div>
             <div class="save_bar_top">
                 <img style="display:none" src="<?php echo get_template_directory_uri(); ?>/functions/images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
-                <input type="submit" value="<?php _e('Save All Changes','black-bird'); ?>" class="button-primary" />
+                <input type="submit" value="<?php _e('Save All Changes', 'black-bird'); ?>" class="button-primary" />
         </form>
         <form action="<?php echo esc_attr($_SERVER['REQUEST_URI']) ?>" method="post" style="display:inline" id="ofform-reset">
             <span class="submit-footer-reset">
-                <input name="reset" type="submit" value="<?php _e('Reset Options','black-bird'); ?>" class="button submit-button reset-button" onclick="return confirm('Click OK to reset. Any settings will be lost!');" />
-                <input type="hidden" name="of_save" value="reset" />
+                <input name="reset" type="submit" value="<?php _e('Reset Options', 'black-bird'); ?>" class="button submit-button reset-button" onclick="return confirm('<?php _e('Click OK to reset. All settings will be lost!', 'black-bird'); ?>');" />
+                <input type="hidden" name="of_save" value="<?php _e('reset', 'black-bird'); ?>" />
             </span>
         </form>
     </div>
@@ -151,10 +152,10 @@ function blackbird_load_only() {
         <link rel="stylesheet" media="screen" type="text/css" href="<?php echo get_template_directory_uri(); ?>/functions/css/colorpicker.css" />
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/functions/js/colorpicker.js"></script>
         <script type="text/javascript" language="javascript">
-            jQuery(document).ready(function(){
-        			
-        			
-                //Color Picker
+                        jQuery(document).ready(function () {
+
+
+                            //Color Picker
         <?php
         $options = blackbird_get_option('of_template');
 
@@ -170,277 +171,288 @@ function blackbird_load_only() {
                     $color = blackbird_get_option($option_id);
                 }
                 ?>
-                                                        jQuery('#<?php echo $option_id; ?>_picker').children('div').css('backgroundColor', '<?php echo $color; ?>');    
-                                                        jQuery('#<?php echo $option_id; ?>_picker').ColorPicker({
-                                                            color: '<?php echo $color; ?>',
-                                                            onShow: function (colpkr) {
-                                                                jQuery(colpkr).fadeIn(500);
-                                                                return false;
-                                                            },
-                                                            onHide: function (colpkr) {
-                                                                jQuery(colpkr).fadeOut(500);
-                                                                return false;
-                                                            },
-                                                            onChange: function (hsb, hex, rgb) {
-                                                                //jQuery(this).css('border','1px solid red');
-                                                                jQuery('#<?php echo $option_id; ?>_picker').children('div').css('backgroundColor', '#' + hex);
-                                                                jQuery('#<?php echo $option_id; ?>_picker').next('input').attr('value','#' + hex);
-                						
-                                                            }
-                                                        });
-            <?php }
-        } ?>
-        		 
-                                      });
-        		
+                                    jQuery('#<?php echo $option_id; ?>_picker').children('div').css('backgroundColor', '<?php echo $color; ?>');
+                                    jQuery('#<?php echo $option_id; ?>_picker').ColorPicker({
+                                        color: '<?php echo $color; ?>',
+                                        onShow: function (colpkr) {
+                                            jQuery(colpkr).fadeIn(500);
+                                            return false;
+                                        },
+                                        onHide: function (colpkr) {
+                                            jQuery(colpkr).fadeOut(500);
+                                            return false;
+                                        },
+                                        onChange: function (hsb, hex, rgb) {
+                                            //jQuery(this).css('border','1px solid red');
+                                            jQuery('#<?php echo $option_id; ?>_picker').children('div').css('backgroundColor', '#' + hex);
+                                            jQuery('#<?php echo $option_id; ?>_picker').next('input').attr('value', '#' + hex);
+
+                                        }
+                                    });
+                <?php
+            }
+        }
+        ?>
+
+                        });
+
         </script>
         <?php
         //AJAX Upload
         ?>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/functions/js/ajaxupload.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function(){
-        			
-                var flip = 0;
-        				
-                jQuery('#expand_options').click(function(){
-                    if(flip == 0){
-                        flip = 1;
-                        jQuery('#of_container #of-nav').hide();
-                        jQuery('#of_container #content').width(755);
-                        jQuery('#of_container .group').add('#of_container .group h2').show();
-        	
-                        jQuery(this).text('[-]');
-        					
-                    } else {
-                        flip = 0;
-                        jQuery('#of_container #of-nav').show();
-                        jQuery('#of_container #content').width(595);
-                        jQuery('#of_container .group').add('#of_container .group h2').hide();
-                        jQuery('#of_container .group:first').show();
-                        jQuery('#of_container #of-nav li').removeClass('current');
-                        jQuery('#of_container #of-nav li:first').addClass('current');
-        					
-                        jQuery(this).text('[+]');
-        				
-                    }
-        			
-                });
-        			
-                jQuery('.group').hide();
-                jQuery('.group:first').fadeIn();
-        				
-                jQuery('.group .collapsed').each(function(){
-                    jQuery(this).find('input:checked').parent().parent().parent().nextAll().each( 
-                    function(){
-                        if (jQuery(this).hasClass('last')) {
-                            jQuery(this).removeClass('hidden');
-                            return false;
-                        }
-                        jQuery(this).filter('.hidden').removeClass('hidden');
-                    });
-                });
-                   					
-                jQuery('.group .collapsed input:checkbox').click(unhideHidden);
-        				
-                function unhideHidden(){
-                    if (jQuery(this).attr('checked')) {
-                        jQuery(this).parent().parent().parent().nextAll().removeClass('hidden');
-                    }
-                    else {
-                        jQuery(this).parent().parent().parent().nextAll().each( 
-                        function(){
-                            if (jQuery(this).filter('.last').length) {
-                                jQuery(this).addClass('hidden');
-                                return false;
+                        jQuery(document).ready(function () {
+
+                            var flip = 0;
+
+                            jQuery('#expand_options').click(function () {
+                                if (flip == 0) {
+                                    flip = 1;
+                                    jQuery('#of_container #of-nav').hide();
+                                    jQuery('#of_container #content').width(755);
+                                    jQuery('#of_container .group').add('#of_container .group h2').show();
+
+                                    jQuery(this).text('[-]');
+
+                                } else {
+                                    flip = 0;
+                                    jQuery('#of_container #of-nav').show();
+                                    jQuery('#of_container #content').width(595);
+                                    jQuery('#of_container .group').add('#of_container .group h2').hide();
+                                    jQuery('#of_container .group:first').show();
+                                    jQuery('#of_container #of-nav li').removeClass('current');
+                                    jQuery('#of_container #of-nav li:first').addClass('current');
+
+                                    jQuery(this).text('[+]');
+
+                                }
+
+                            });
+
+                            jQuery('.group').hide();
+                            jQuery('.group:first').fadeIn();
+
+                            jQuery('.group .collapsed').each(function () {
+                                jQuery(this).find('input:checked').parent().parent().parent().nextAll().each(
+                                        function () {
+                                            if (jQuery(this).hasClass('last')) {
+                                                jQuery(this).removeClass('hidden');
+                                                return false;
+                                            }
+                                            jQuery(this).filter('.hidden').removeClass('hidden');
+                                        });
+                            });
+
+                            jQuery('.group .collapsed input:checkbox').click(unhideHidden);
+
+                            function unhideHidden() {
+                                if (jQuery(this).attr('checked')) {
+                                    jQuery(this).parent().parent().parent().nextAll().removeClass('hidden');
+                                }
+                                else {
+                                    jQuery(this).parent().parent().parent().nextAll().each(
+                                            function () {
+                                                if (jQuery(this).filter('.last').length) {
+                                                    jQuery(this).addClass('hidden');
+                                                    return false;
+                                                }
+                                                jQuery(this).addClass('hidden');
+                                            });
+
+                                }
                             }
-                            jQuery(this).addClass('hidden');
-                        });
-                   					
-                    }
-                }
-        				
-                jQuery('.of-radio-img-img').click(function(){
-                    jQuery(this).parent().parent().find('.of-radio-img-img').removeClass('of-radio-img-selected');
-                    jQuery(this).addClass('of-radio-img-selected');
-        					
-                });
-                jQuery('.of-radio-img-label').hide();
-                jQuery('.of-radio-img-img').show();
-                jQuery('.of-radio-img-radio').hide();
-                jQuery('#of-nav li:first').addClass('current');
-                jQuery('#of-nav li a').click(function(evt){
-        				
-                    jQuery('#of-nav li').removeClass('current');
-                    jQuery(this).parent().addClass('current');
-        						
-                    var clicked_group = jQuery(this).attr('href');
-        		 
-                    jQuery('.group').hide();
-        						
-                    jQuery(clicked_group).fadeIn();
-        		
-                    evt.preventDefault();
-        						
-                });
-        				
-                if('<?php if (isset($_REQUEST['reset'])) {
+
+                            jQuery('.of-radio-img-img').click(function () {
+                                jQuery(this).parent().parent().find('.of-radio-img-img').removeClass('of-radio-img-selected');
+                                jQuery(this).addClass('of-radio-img-selected');
+
+                            });
+                            jQuery('.of-radio-img-label').hide();
+                            jQuery('.of-radio-img-img').show();
+                            jQuery('.of-radio-img-radio').hide();
+                            jQuery('#of-nav li:first').addClass('current');
+                            jQuery('#of-nav li a').click(function (evt) {
+
+                                jQuery('#of-nav li').removeClass('current');
+                                jQuery(this).parent().addClass('current');
+
+                                var clicked_group = jQuery(this).attr('href');
+
+                                jQuery('.group').hide();
+
+                                jQuery(clicked_group).fadeIn();
+
+                                evt.preventDefault();
+
+                            });
+
+                            if ('<?php
+        if (isset($_REQUEST['reset'])) {
             echo $_REQUEST['reset'];
         } else {
             echo 'false';
-        } ?>' == 'true'){
-        					
-                    var reset_popup = jQuery('#of-popup-reset');
-                    reset_popup.fadeIn();
-                    window.setTimeout(function(){
-                        reset_popup.fadeOut();                        
-                    }, 2000);
-                    //alert(response);
-        					
-                }
-        					
-                //Update Message popup
-                jQuery.fn.center = function () {
-                    this.animate({"top":( jQuery(window).height() - this.height() - 200 ) / 2+jQuery(window).scrollTop() + "px"},100);
-                    this.css("left", 250 );
-                    return this;
-                }
-        		
-        			
-                jQuery('#of-popup-save').center();
-                jQuery('#of-popup-reset').center();
-                jQuery(window).scroll(function() { 
-        			
-                    jQuery('#of-popup-save').center();
-                    jQuery('#of-popup-reset').center();
-        			
-                });
-        			
-        			
-        		
-                //AJAX Upload
-                jQuery('.image_upload_button').each(function(){
-        			
-                    var clickedObject = jQuery(this);
-                    var clickedID = jQuery(this).attr('id');	
-                    new AjaxUpload(clickedID, {
-                        action: '<?php echo admin_url("admin-ajax.php"); ?>',
-                        name: clickedID, // File upload name
-                        data: { // Additional data to send
-                            action: 'of_ajax_post_action',
-                            type: 'upload',
-                            data: clickedID },
-                        autoSubmit: true, // Submit file after selection
-                        responseType: false,
-                        onChange: function(file, extension){},
-                        onSubmit: function(file, extension){
-                            clickedObject.text('Uploading'); // change button text, when user selects file	
-                            this.disable(); // If you want to allow uploading only 1 file at time, you can disable upload button
-                            interval = window.setInterval(function(){
-                                var text = clickedObject.text();
-                                if (text.length < 13){	clickedObject.text(text + '.'); }
-                                else { clickedObject.text('Uploading'); } 
-                            }, 200);
-                        },
-                        onComplete: function(file, response) {
-        				   
-                            window.clearInterval(interval);
-                            clickedObject.text('Upload Image');	
-                            this.enable(); // enable upload button
-        					
-                            // If there was an error
-                            if(response.search('Upload Error') > -1){
-                                var buildReturn = '<span class="upload-error">' + response + '</span>';
-                                jQuery(".upload-error").remove();
-                                clickedObject.parent().after(buildReturn);
-        					
+        }
+        ?>' == 'true') {
+
+                                var reset_popup = jQuery('#of-popup-reset');
+                                reset_popup.fadeIn();
+                                window.setTimeout(function () {
+                                    reset_popup.fadeOut();
+                                }, 2000);
+                                //alert(response);
+
                             }
-                            else{
-                                var buildReturn = '<img class="hide of-option-image" id="image_'+clickedID+'" src="'+response+'" alt="" />';
-                                jQuery(".upload-error").remove();
-                                jQuery("#image_" + clickedID).remove();	
-                                clickedObject.parent().after(buildReturn);
-                                jQuery('img#image_'+clickedID).fadeIn();
-                                clickedObject.next('span').fadeIn();
-                                clickedObject.parent().prev('input').val(response);
+
+                            //Update Message popup
+                            jQuery.fn.center = function () {
+                                this.animate({"top": (jQuery(window).height() - this.height() - 200) / 2 + jQuery(window).scrollTop() + "px"}, 100);
+                                this.css("left", 250);
+                                return this;
                             }
-                        }
-                    });
-        			
-                });
-        			
-                //AJAX Remove (clear option value)
-                jQuery('.image_reset_button').click(function(){
-        			
-                    var clickedObject = jQuery(this);
-                    var clickedID = jQuery(this).attr('id');
-                    var theID = jQuery(this).attr('title');	
-        	
-                    var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
-        				
-                    var data = {
-                        action: 'of_ajax_post_action',
-                        type: 'image_reset',
-                        data: theID
-                    };
-        					
-                    jQuery.post(ajax_url, data, function(response) {
-                        var image_to_remove = jQuery('#image_' + theID);
-                        var button_to_hide = jQuery('#reset_' + theID);
-                        image_to_remove.fadeOut(500,function(){ jQuery(this).remove(); });
-                        button_to_hide.fadeOut();
-                        clickedObject.parent().prev('input').val('');
-        						
-        						
-        						
-                    });
-        					
-                    return false; 
-        					
-                });   	 	
-        			
-                //Save everything else
-                jQuery('#ofform').submit(function(){
-        				
-                    function newValues() {
-                        var serializedValues = jQuery("#ofform").serialize();
-                        return serializedValues;
-                    }
-                    jQuery(":checkbox, :radio").click(newValues);
-                    jQuery("select").change(newValues);
-                    jQuery('.ajax-loading-img').fadeIn();
-                    var serializedReturn = newValues();
-        					 
-                    var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
-        				
-                    //var data = {data : serializedReturn};
-                    var data = {
+
+
+                            jQuery('#of-popup-save').center();
+                            jQuery('#of-popup-reset').center();
+                            jQuery(window).scroll(function () {
+
+                                jQuery('#of-popup-save').center();
+                                jQuery('#of-popup-reset').center();
+
+                            });
+
+
+
+                            //AJAX Upload
+                            jQuery('.image_upload_button').each(function () {
+
+                                var clickedObject = jQuery(this);
+                                var clickedID = jQuery(this).attr('id');
+                                new AjaxUpload(clickedID, {
+                                    action: '<?php echo admin_url("admin-ajax.php"); ?>',
+                                    name: clickedID, // File upload name
+                                    data: {// Additional data to send
+                                        action: 'of_ajax_post_action',
+                                        type: 'upload',
+                                        data: clickedID},
+                                    autoSubmit: true, // Submit file after selection
+                                    responseType: false,
+                                    onChange: function (file, extension) {
+                                    },
+                                    onSubmit: function (file, extension) {
+                                        clickedObject.text('Uploading'); // change button text, when user selects file	
+                                        this.disable(); // If you want to allow uploading only 1 file at time, you can disable upload button
+                                        interval = window.setInterval(function () {
+                                            var text = clickedObject.text();
+                                            if (text.length < 13) {
+                                                clickedObject.text(text + '.');
+                                            }
+                                            else {
+                                                clickedObject.text('Uploading');
+                                            }
+                                        }, 200);
+                                    },
+                                    onComplete: function (file, response) {
+
+                                        window.clearInterval(interval);
+                                        clickedObject.text('Upload Image');
+                                        this.enable(); // enable upload button
+
+                                        // If there was an error
+                                        if (response.search('Upload Error') > -1) {
+                                            var buildReturn = '<span class="upload-error">' + response + '</span>';
+                                            jQuery(".upload-error").remove();
+                                            clickedObject.parent().after(buildReturn);
+
+                                        }
+                                        else {
+                                            var buildReturn = '<img class="hide of-option-image" id="image_' + clickedID + '" src="' + response + '" alt="" />';
+                                            jQuery(".upload-error").remove();
+                                            jQuery("#image_" + clickedID).remove();
+                                            clickedObject.parent().after(buildReturn);
+                                            jQuery('img#image_' + clickedID).fadeIn();
+                                            clickedObject.next('span').fadeIn();
+                                            clickedObject.parent().prev('input').val(response);
+                                        }
+                                    }
+                                });
+
+                            });
+
+                            //AJAX Remove (clear option value)
+                            jQuery('.image_reset_button').click(function () {
+
+                                var clickedObject = jQuery(this);
+                                var clickedID = jQuery(this).attr('id');
+                                var theID = jQuery(this).attr('title');
+
+                                var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
+
+                                var data = {
+                                    action: 'of_ajax_post_action',
+                                    type: 'image_reset',
+                                    data: theID
+                                };
+
+                                jQuery.post(ajax_url, data, function (response) {
+                                    var image_to_remove = jQuery('#image_' + theID);
+                                    var button_to_hide = jQuery('#reset_' + theID);
+                                    image_to_remove.fadeOut(500, function () {
+                                        jQuery(this).remove();
+                                    });
+                                    button_to_hide.fadeOut();
+                                    clickedObject.parent().prev('input').val('');
+
+
+
+                                });
+
+                                return false;
+
+                            });
+
+                            //Save everything else
+                            jQuery('#ofform').submit(function () {
+
+                                function newValues() {
+                                    var serializedValues = jQuery("#ofform").serialize();
+                                    return serializedValues;
+                                }
+                                jQuery(":checkbox, :radio").click(newValues);
+                                jQuery("select").change(newValues);
+                                jQuery('.ajax-loading-img').fadeIn();
+                                var serializedReturn = newValues();
+
+                                var ajax_url = '<?php echo admin_url("admin-ajax.php"); ?>';
+
+                                //var data = {data : serializedReturn};
+                                var data = {
         <?php if (isset($_REQUEST['page']) && $_REQUEST['page'] == 'optionsframework') { ?>
-                                                                            type: 'options',
+                                    type: 'options',
         <?php } ?>
-                                                                        action: 'of_ajax_post_action',
-                                                                        data: serializedReturn
-                                                                    };
-        					
-                                                                    jQuery.post(ajax_url, data, function(response) {
-                                                                        var success = jQuery('#of-popup-save');
-                                                                        var loading = jQuery('.ajax-loading-img');
-                                                                        loading.fadeOut();  
-                                                                        success.fadeIn();
-                                                                        window.setTimeout(function(){
-                                                                            success.fadeOut(); 
-        						   
-        												
-                                                                        }, 2000);
-                                                                    });
-        					
-                                                                    return false; 
-        					
-                                                                });   	 	
-        				
-                                                            });
+                                action: 'of_ajax_post_action',
+                                        data: serializedReturn
+                                };
+
+                                jQuery.post(ajax_url, data, function (response) {
+                                    var success = jQuery('#of-popup-save');
+                                    var loading = jQuery('.ajax-loading-img');
+                                    loading.fadeOut();
+                                    success.fadeIn();
+                                    window.setTimeout(function () {
+                                        success.fadeOut();
+
+
+                                    }, 2000);
+                                });
+
+                                return false;
+
+                            });
+
+                        });
         </script>
-    <?php
+        <?php
     }
 
 }

@@ -14,7 +14,7 @@ function blackbird_theme_support() {
     $locale = get_locale();
     $locale_file = get_template_directory() . "/languages/$locale.php";
     if (is_readable($locale_file))
-        require_once($locale_file);
+        require_once $locale_file;
 // This theme styles the visual editor with editor-style.css to match the theme style.
     add_editor_style();
 }
