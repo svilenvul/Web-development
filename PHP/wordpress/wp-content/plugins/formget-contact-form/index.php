@@ -3,7 +3,7 @@
   Plugin Name: FormGet Contact Form
   Plugin URI: http://www.formget.com
   Description: FormGet Contact Form is an eassy and effective form builder tool which enable you to bulid and embed form on your website in few steps. With FormGet Contact Form manage all your contact forms and your entire client communication at one single place.
-  Version: 5.3
+  Version: 5.3.1
   Author: FormGet
   Author URI: http://www.formget.com
  */
@@ -289,7 +289,8 @@ function cf_setting_page() {
 
 function cf_embeded_script() {
     wp_enqueue_script('embeded_script', plugins_url('js/fg_script.js', __FILE__), array('jquery'));
-    wp_localize_script('embeded_script', 'script_call', array('ajaxurl' => admin_url('admin-ajax.php')));
+wp_localize_script('embeded_script', 'script_call', array('ajaxurl' => admin_url('admin-ajax.php'),'aj_nonce' => wp_create_nonce( 'script-nonce' )));
+   
 }
 
 if (isset($_GET['page']) == 'cf_page') {
@@ -297,6 +298,9 @@ if (isset($_GET['page']) == 'cf_page') {
 }
 
 function cf_text_ajax_process_request() {
+if(!check_ajax_referer('script-nonce', 'aj_nonce') && !is_user_logged_in() && !current_user_can( 'manage_options' )){
+	return;
+	}
     $text_value = $_POST['value'];
     // $val = $_POST['value_hide'];
     $page_id = $_POST['page_id'];

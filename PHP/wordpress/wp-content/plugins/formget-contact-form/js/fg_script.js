@@ -81,7 +81,8 @@ jQuery(document).ready(function() {
         var data = {
             action: 'request_response',
             value: text_value,
-            page_id: checkedValues
+            page_id: checkedValues,
+			aj_nonce: script_call.aj_nonce
         };
         jQuery.post(script_call.ajaxurl, data, function(response) {
             if (response == 1) {

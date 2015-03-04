@@ -22,3 +22,14 @@ $header_options = array(
 	'admin-preview-callback' => '',
 );
 add_theme_support( 'custom-header', $header_options );
+
+function the_eldest_category() {
+    $category = get_the_category();
+    $parent = $category[0]->category_parent;
+    if($parent !=0){
+        $category = get_the_category_by_ID($parent);
+    }else{
+        $category=$category[0]->cat_name;
+    };
+    echo $category;
+}

@@ -50,3 +50,6 @@ p{
 .sidebar {
     background-color: #343434 ;
 }
+.post_content a + p {
+    margin-top: 20px;
+}

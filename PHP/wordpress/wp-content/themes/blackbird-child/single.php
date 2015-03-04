@@ -7,6 +7,10 @@
 <?php get_header(); ?>
 
 <!--Start Page Heading-->
+<div class="page-heading">
+    <h1 class="page-title"><?php the_eldest_category();?></h1>
+    <div class="clear"></div>
+</div>
 <!--Start Page Content -->
 <div class="page-content-container">
     <div class="page-content single">
