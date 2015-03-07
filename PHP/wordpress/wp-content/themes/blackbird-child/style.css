@@ -11,15 +11,31 @@ License URI: license.txt
 Tags:two-columns, responsive-layout, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
 */
  
-
-body {
-    font-family: Verdana, Geneva, sans-serif;
+html, body {
+    min-height: 100% !important;
+    height: 100%;
 }
-
+body {
+    font-family: Verdana, Geneva, sans-serif;    
+    background:url(images/perspective.svg);
+    background-color: #d9e7f2;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+div.menu_wrapper, div.slider-wrapper{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+div.page-content-container .grid_24 {
+    background-color: #ffffff ;
+}
 h1,h2,h3,h4,h5,h6,.header-info p {
     font-family:  Impact, Charcoal, sans-serif;
 }
-
+div.content-bar {
+    padding-left: 20px;
+}
 p{
     margin-bottom: 10px;
 }
@@ -33,9 +49,7 @@ p{
 .header .grid_8,.header .grid_16 {
     display: inline-block;
 }
-.page-content-container .grid_24 {
-    background-color: #efefef ;
-}
+
 .header  {
     background-image: url("../../uploads/2015/03/squared_metal.png");
     background-repeat: repeat;

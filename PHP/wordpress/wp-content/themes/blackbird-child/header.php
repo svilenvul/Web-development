@@ -18,8 +18,7 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <?php wp_head(); ?>	
     </head>				
-    <body <?php body_class(); ?> style="<?php if (blackbird_get_option('blackbird_bodybg') != '') { ?>background: fixed url(<?php echo blackbird_get_option('blackbird_bodybg'); ?>);<?php } else {
-            ?> background: fixed url(<?php echo get_template_directory_uri(); ?>/images/bg.jpg); <?php } ?>" >
+    <body <?php body_class(); ?> >
         <div class="main-container">
             <div class="container_24">
                 <div class="grid_24">
