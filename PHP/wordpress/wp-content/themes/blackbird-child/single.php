@@ -6,12 +6,11 @@
 ?>
 <?php get_header(); ?>
 
-<!--Start Page Heading-->
+<!--Start Page Content -->
 <div class="page-heading">
-    <h1 class="page-title"><?php the_eldest_category();?></h1>
+    <h1 class="page-title"><?php the_eldest_category(); ?></h1>
     <div class="clear"></div>
 </div>
-<!--Start Page Content -->
 <div class="page-content-container">
     <div class="page-content single">
         <div class="grid_16 alpha">
@@ -50,7 +49,7 @@
                                     </span> <span class="nav-next">
                                         <?php next_post_link('%link', __('Next Post <span class="meta-nav">&rarr;</span>', 'black-bird')); ?>
                                     </span> </nav>
-                              
+
                                 </div>
                                 </div>
                                 <div class="grid_8 omega">
@@ -60,7 +59,9 @@
                                 </div>
                                 </div>
                                 </div>
+                                <!--End Page Content -->
                                 </div>
                                 </div>
                                 </div>
+                                <!--End Page Container -->
                                 <?php get_footer(); ?> 

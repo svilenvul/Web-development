@@ -10,11 +10,11 @@
  */
 ?>
 <?php get_header(); ?>
+<!--Start Page Content -->
 <div class="page-heading">
     <h1 class="page-title"><?php the_title(); ?></h1>
     <div class="clear"></div>
 </div>
-<!--Start Page Content -->
 <div class="page-content-container">
     <div class="page-content">
         <div class="grid_16 alpha">
@@ -34,7 +34,9 @@
         </div> 
     </div>
 </div>
+<!--End Page Content -->
 </div>
 </div>
 </div>
+<!--End Page Container -->
 <?php get_footer(); ?>

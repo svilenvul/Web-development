@@ -1,0 +1,156 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13.03.2015, 23:01:19
+    Author     : 888
+*/
+@import '../css/960_24_col_responsive.css';
+//colors
+$background-color:#ffffff;//white
+$header-dark-color:#000; //black
+$header-light-color:#12212f;
+$body-text-color:#717273; //grey
+$link-color:#122432;//darkblue
+$header-text-color:#ffffff;//white;
+$headings-color:#122432;//darkblue
+$important-info-color:red;
+$menu-active-color:#ffffff;//white;
+$menu-inactive-color:#bbb;//grey
+//
+
+body {
+    font-size: 15px;
+    font-family: Verdana, Geneva, sans-serif;    
+    background-color: #ffffff;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    /*h1 {
+        font-size: 3em;
+    }
+    h2{
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1.6em;
+    }
+    h4{
+        
+    }*/
+    h1,h2,h3,h4,h5,h6,.header-info p {
+        font-family: Franklin Gothic Medium, Impact, Charcoal, sans-serif;
+        color:#fff;
+    }
+    .header-wrapper  {
+        padding-bottom: 10px;
+        overflow: hidden;
+        background-color: #12212f;
+        .logo {
+            margin-top: 15px;
+        }
+        .header-info {
+            margin-top: 15px;
+        }
+        .site-title {
+            line-height: 1.1em;
+        }
+    }
+    .menu_wrapper {
+        margin-top: 0px;
+        padding-top: 0px;
+        display: block;
+        background-image: none;
+        background-color: #000;
+        margin-top: 0px;
+        padding-top: 0px;
+        .top-search .searchform {
+            width: 90%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+    .page-content-container {
+        .circle-content div {
+            margin-left: 0px;
+        }
+        .slider-wrapper {
+            margin-top: 0px;
+            padding-top: 0px;
+            .flexslider{
+                z-index: 2;
+                .flex-caption {                    
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    height:auto;
+                    width: 98%;
+                    padding-left:1%;
+                    padding-right:1%;
+                    top:auto;
+                    left: 0px;
+                    bottom: 0px;
+                    right: 0px;
+                    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+                    filter: alpha(opacity=50);
+                    opacity:.5;    
+                    text-align: left;
+                    text-justify: none;
+                    p {
+                        color : #ffffff;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .sidebar {
+        background-color: #343434 ;
+    }
+    p{
+        margin-bottom: 10px;
+    }
+    .excerpt p {
+        margin-top: 20px;
+    }
+    hr {
+        border: 1px solid lightgray;
+    }
+    p.cell {
+        color: $important-info-color;
+    }   
+    .content-bar .post .post_content img.postimg{
+        height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+        max-width: 95%;
+        width: auto;
+    }
+  
+    @media only screen and (min-width: 767px){
+        .page-content {
+            position: relative;
+            background-image: url("../images/background-cut2.jpg"); 
+            background-position: right -60px;         
+            background-repeat: repeat-y;  
+            & > .grid_8 {
+                position: absolute;
+                top : 0px;
+                bottom : 0px;
+            }
+            .feature-content-inner {
+                max-width: 100%;
+            }
+        }
+        .sidebar {
+            position: absolute;
+            top:0px;
+            right : 0px;
+            width:60%;
+            height:300px;
+            padding-top: 10px;        
+
+        }
+    }
+}

@@ -14,6 +14,7 @@
         <title>
             <?php wp_title('&#124;', true, 'right'); ?>
         </title> 
+        <a href="../blackbird-child/header.php"></a>
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
         <?php wp_head(); ?>	
