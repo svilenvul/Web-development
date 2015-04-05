@@ -9,9 +9,7 @@ License: GNU General Public License
 License URI: license.txt
 Tags:two-columns, responsive-layout, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
 */
-@import url(css/reset.css);
-@import url(css/960_24_col_responsive.css);
-@import url(https://fonts.googleapis.com/css?family=Rokkitt);
+
 body {
     font-family: "Trebuchet MS";
     font-size:13px;

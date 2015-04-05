@@ -7,64 +7,117 @@ and open the template in the editor.
     Created on : 13.03.2015, 23:01:19
     Author     : 888
 */
-@import '../css/960_24_col_responsive.css';
+//@import '../css/960_24_col_responsive.css';
+@font-face {
+    font-family: 'icomoon';
+    src:url('../fonts/fonts/icomoon.eot?c9o32p');
+    src:url('../fonts/fonts/icomoon.eot?#iefixc9o32p') format('embedded-opentype'),
+        url('../fonts/fonts/icomoon.woff?c9o32p') format('woff'),
+        url('../fonts/fonts/icomoon.ttf?c9o32p') format('truetype'),
+        url('../fonts/fonts/icomoon.svg?c9o32p#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+$icons:(
+email:"\ea84",
+phone : "\e942",
+map : "\e948",
+linkedin:"\eac8",
+google:"\ea89",
+facebook:"\ea8d"
+);
 //colors
-$background-color:#ffffff;//white
-$header-dark-color:#000; //black
-$header-light-color:#12212f;
-$body-text-color:#717273; //grey
-$link-color:#122432;//darkblue
-$header-text-color:#ffffff;//white;
-$headings-color:#122432;//darkblue
-$important-info-color:red;
-$menu-active-color:#ffffff;//white;
-$menu-inactive-color:#bbb;//grey
-//
+$background-colors: (
+primary: #ffffff,//white
+secondary:#6DBDD6, //lightblue
+tertiary:#122432, //darkblue
+);
+$text-colors:(
+body:#111, //grey
+link: #2A5DB0,//darktblue
+link-alternative:#ffffff,
+hover: #f8ca23,//yellow
+headings:#122432, //darkblue
+important:#B71427 //red
+);
+$brand-colors:(
+primary:#181585,//darkblue
+secondary:#376eac, //grey
+);
+$fonts:(
+body:(Verdana, Geneva, sans-serif),
+headings:(Franklin Gothic Medium, Impact, Charcoal, sans-serif)
+);
+
+
 
 body {
     font-size: 15px;
-    font-family: Verdana, Geneva, sans-serif;    
-    background-color: #ffffff;
+    font-family: map-get($fonts,body);   
+    color: map-get($text-colors,body);
+    background-color: map-get($background-colors,primary);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
 
-    /*h1 {
-        font-size: 3em;
-    }
-    h2{
-        font-size: 2em;
-    }
-    h3{
-        font-size: 1.6em;
-    }
-    h4{
-        
-    }*/
     h1,h2,h3,h4,h5,h6,.header-info p {
-        font-family: Franklin Gothic Medium, Impact, Charcoal, sans-serif;
-        color:#fff;
+        font-family: map-get($fonts,headings);   
     }
     .header-wrapper  {
         padding-bottom: 10px;
         overflow: hidden;
-        background-color: #12212f;
+        background-color: map-get($background-colors,secondary);
         .logo {
             margin-top: 15px;
+            #primary {
+                color: map-get($brand-colors,primary);
+            }
+            #secondary {
+                color:map-get($brand-colors,secondary);
+            }
+            #tertiary {
+                color:map-get($text-colors,link-alternative);
+            }
         }
         .header-info {
             margin-top: 15px;
+            /*p {
+                font-size: 15px;
+                line-height: 20px;
+            }*/
+
+            .icon-email:before {
+                content: map-get($icons,email);
+            }
+            .icon-map:before {
+                content: map-get($icons,map);
+            } 
+
         }
         .site-title {
             line-height: 1.1em;
         }
+
     }
     .menu_wrapper {
         margin-top: 0px;
         padding-top: 0px;
         display: block;
         background-image: none;
-        background-color: #000;
+        background-color: map-get($background-colors,tertiary);
         margin-top: 0px;
         padding-top: 0px;
         .top-search .searchform {
@@ -72,72 +125,241 @@ body {
             margin-left: 5%;
             margin-right: 5%;
         }
+
+
+
+
+
     }
     .page-content-container {
         .circle-content div {
             margin-left: 0px;
+            p {
+                color : map-get($text-colors,body);
+            }
+            .circle 
+            {
+                margin:0 auto;
+            }
+
         }
         .slider-wrapper {
             margin-top: 0px;
             padding-top: 0px;
+
             .flexslider{
-                z-index: 2;
-                .flex-caption {                    
-                    overflow: hidden;
+                .flex-caption { 
+                    background: none;
+                    position :relative;
+                    background-color: map-get($background-colors,tertiary);
+                    //overflow: hidden;
                     text-overflow: ellipsis;
                     height:auto;
                     width: 98%;
                     padding-left:1%;
                     padding-right:1%;
                     top:auto;
-                    left: 0px;
-                    bottom: 0px;
-                    right: 0px;
-                    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-                    filter: alpha(opacity=50);
-                    opacity:.5;    
+                    left: 0px;                    
+                    right: 0px;                      
                     text-align: left;
                     text-justify: none;
+                    border-radius:0px;
                     p {
-                        color : #ffffff;
+                        color : map-get($text-colors,link-alternative);
+                    }
+                    h1 {
+                        padding: 5px;
+                        margin: 5px;
                     }
                 }
             }
 
         }
+        .post {
+            p,li{
+                color: map-get($text-colors,body);
+            }
+            h1 {
+                & > a {
+                    color: map-get($text-colors,headings);
+                }
+            }            
+        } 
+        p{
+            margin-bottom: 10px;
+        }      
+        .read-more, .nav-previous a,.nav-next a{
+            background:url(../images/readmore.png) center no-repeat;
+            width:100%;
+            height:40px;
+            color:#fff;
+            padding: 20px 0 0 0;
+            text-align:center;
+            font-family: 'Trebuchet MS';
+            font-size:16px;
+            margin-top:25px;
+            display:block;
+            -webkit-transition:all 0.3s linear;
+            -moz-transition:all 0.3s linear;
+            -o-transition:all 0.3s linear;
+            &:hover {
+                opacity:0.8;
+                font-weight: bold;
+                color:black;
+                background:url(../images/readmoreyellow.png) center no-repeat;
+            }
+        }        
     }
 
-    .sidebar {
-        background-color: #343434 ;
+    .sidebar {       
+        text-align: center;
+        padding:0px;
+        background-color: map-get($background-colors,secondary); 
+
+        .headeer-cust {
+            padding: 10px;
+        }
+        .content {
+
+            padding: 10px;
+            margin: 0px;
+
+            p {
+                text-align: center;
+                margin-bottom: 0px;
+            }
+            h3 {
+                color: map-get($text-colors,link-alternative);
+                border: none;
+            }
+            ul {
+                border: 8px solid #336;
+                border-width: 1px 0px 1px 0px;
+            }
+        }
+        .footer-cust {            
+            padding: 10px;
+            background-color: map-get($background-colors,tertiary); 
+
+        }
+
+
     }
-    p{
-        margin-bottom: 10px;
+
+    .footer-wrapper {
+        background-color: map-get($background-colors,secondary);
+        .icon-face:before {
+            content: map-get($icons,facebook);
+        } 
+        .icon-link:before {
+            content: map-get($icons,linkedin);
+        } 
+        .icon-goog:before {
+            content: map-get($icons,google);
+        } 
+        .footer {
+            background: none;            
+        }
+        .footer_bottom {
+            background-color: map-get($background-colors,tertiary);
+        }
     }
+    .icon-phone {
+        animation: ring 8s 1s ease-in-out infinite;
+        transform-origin: 50% 4px;
+        @keyframes ring {
+            0% { transform: rotate(0); }
+            1% { transform: rotate(30deg); }
+            3% { transform: rotate(-28deg); }
+            5% { transform: rotate(34deg); }
+            7% { transform: rotate(-32deg); }
+            9% { transform: rotate(30deg); }
+            11% { transform: rotate(-28deg); }
+            13% { transform: rotate(26deg); }
+            15% { transform: rotate(-24deg); }
+            17% { transform: rotate(22deg); }
+            19% { transform: rotate(-20deg); }
+            21% { transform: rotate(18deg); }
+            23% { transform: rotate(-16deg); }
+            25% { transform: rotate(14deg); }
+            27% { transform: rotate(-12deg); }
+            29% { transform: rotate(10deg); }
+            31% { transform: rotate(-8deg); }
+            33% { transform: rotate(6deg); }
+            35% { transform: rotate(-4deg); }
+            37% { transform: rotate(2deg); }
+            39% { transform: rotate(-1deg); }
+            41% { transform: rotate(1deg); }
+            43% { transform: rotate(0); }
+            100% { transform: rotate(0); }
+        }
+
+    }
+    .icon-phone:before {
+        content: map-get($icons,phone);
+
+    } 
+    //link colour set
+    a,.footer .widget_inner a {
+        color: map-get($text-colors,link);
+        &:hover {
+            color: map-get($text-colors,hover);
+        }
+    }
+    //alternative link colour set
+    .header-wrapper , #menu li, .sidebar li, .slider-wrapper, .footer_bottom_inner {
+        a {
+            color: map-get($text-colors,link-alternative);
+            &:hover {
+                color: map-get($text-colors,hover);
+            }
+        }
+    }
+
     .excerpt p {
         margin-top: 20px;
     }
     hr {
-        border: 1px solid lightgray;
+        border: 1px solid lightgray;       
     }
-    p.cell {
-        color: $important-info-color;
+    .important {
+        color: map-get($text-colors,important);
     }   
+    //responsive images
     .content-bar .post .post_content img.postimg{
         height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
         max-width: 95%;
         width: auto;
     }
-  
+    // full height column 
+    /*.full-height {
+        display: inline-block;
+        height: 280px;
+        text-align: center;
+        position: relative;
+        border:2px solid #333;
+        border-style: dashed;
+        margin-left:1px; border + margin = 10px 
+        z-index:2;
+        background-color:grey;
+        opacity:.8;
+        p {
+            line-height: 280px;
+             
+        }
+    }*/   
+
     @media only screen and (min-width: 767px){
         .page-content {
             position: relative;
             background-image: url("../images/background-cut2.jpg"); 
             background-position: right -60px;         
             background-repeat: repeat-y;  
-            & > .grid_8 {
+            &  div#shaft {
                 position: absolute;
                 top : 0px;
                 bottom : 0px;
+                width: 33%;
             }
             .feature-content-inner {
                 max-width: 100%;
@@ -147,10 +369,18 @@ body {
             position: absolute;
             top:0px;
             right : 0px;
-            width:60%;
-            height:300px;
-            padding-top: 10px;        
-
+            width:80%;
+            height:305px;   
+            .footer-cust {
+                position: absolute;
+                width:100%;
+                bottom:0px;
+            }
+        }
+    }
+    @media only screen and (max-width: 767px){
+        .feature-content .feature-content-inner {
+            max-width: 100%;
         }
     }
 }

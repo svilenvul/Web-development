@@ -5,8 +5,8 @@
  */
 ?>
 <?php get_header(); ?>
-
 <!--Start Page Content -->
+<div class="grid_24">
 <div class="page-heading">
     <h1 class="page-title"><a href="#"><?php printf(__('%s', 'black-bird'), '' . single_cat_title('', false) . ''); ?></a></h1>
     <div class="clear"></div>

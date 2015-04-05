@@ -10,6 +10,7 @@
  */
 ?>
 <?php get_header(); ?>
+<div class="grid_24">
 <!--Start Page Content -->
 <div class="page-heading">
     <h1 class="page-title"><?php the_title(); ?></h1>

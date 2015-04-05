@@ -1,4 +1,4 @@
-<form role="search" method="get" class="searchform" action="<?php echo home_url('/'); ?>">
+<form method="get" class="searchform" action="<?php echo home_url('/'); ?>">
     <div>
         <input type="text" onfocus="if (this.value == 'Търсене') {
                     this.value = '';

@@ -1,0 +1,27 @@
+JavaScript Ecma6
+
+1. History
+    -SPA applications - node.js,rhino,io.js
+2.Using
+    -enable tags in Chrome ans Firefox
+    -compiling via Babel, Traceur
+3. Variables.
+    -let (variable with block scope)
+    -cosnt
+4.Iteration
+    -for... of - itaration over array
+5. Format string
+    - ${object.property}
+6. Class and inheritnace.
+    -class
+    -constructor
+    -get
+    -set
+    -super
+7.Objects literals
+8.Destructioning assignment
+    -create variables from arrays, objects
+9.Comprehensions.
+10.Maps and sets. 
+11.Arrow functions.ope for every file.
+12.Modules

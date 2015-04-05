@@ -6,6 +6,7 @@
 ?>
 <?php get_header(); ?>
 
+<div class="grid_24">
 <!--Start Page Content -->
 <div class="page-heading">
     <h1 class="page-title"><?php the_eldest_category(); ?></h1>
@@ -19,7 +20,7 @@
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>  
                         <!--post start-->
                         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            <h1 class="post_title single"><span><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(esc_attr__('Permalink to %s', 'black-bird'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a><span></h1>
+                            <h1 class="post_title single"><span><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(esc_attr__('Permalink to %s', 'black-bird'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></span></h1>
                                         <div class="post_content">
                                             <?php the_content(); ?>
                                             <div class="clear"></div>
@@ -45,9 +46,9 @@
                                 <?php endif; ?>
                                 <!--End Loop-->
                                 <nav id="nav-single"> <span class="nav-previous">
-                                        <?php previous_post_link('%link', __('<span class="meta-nav">&larr;</span> Previous Post ', 'black-bird')); ?>
+                                        <?php previous_post_link('%link', __('<span class="meta-nav">&larr;</span> Следващ ', 'black-bird')); ?>
                                     </span> <span class="nav-next">
-                                        <?php next_post_link('%link', __('Next Post <span class="meta-nav">&rarr;</span>', 'black-bird')); ?>
+                                        <?php next_post_link('%link', __('Предишен <span class="meta-nav">&rarr;</span>', 'black-bird')); ?>
                                     </span> </nav>
 
                                 </div>

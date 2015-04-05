@@ -1,4 +1,9 @@
 (function ($) {
+    $.fn.exists = function () {
+        return this.length !== 0;
+    }
+
+
     $(document).ready(function () {
         $window = {
             element: $(window),
@@ -11,9 +16,10 @@
         };
         $elevator = {
             element: $('.sidebar'),
+            shaft: $('#shaft'),
             speed: 100,
             state: "stopped",
-            treshould: 72,
+            treshould: 75,
             targetUp: undefined,
             targetDown: undefined,
             getUp: function () {
@@ -23,27 +29,37 @@
                 return this.element.offset().top + this.element.height();
             },
             moveUp: function () {
-                this.state = "movingUp";
-                this.element.removeClass("stopped").addClass("movingUp");
                 $distance = this.element.height() + this.treshould;
                 $target = parseInt(this.element.css("top")) - $distance;
-                $correction = $distance / this.speed;
-                that = this;
-                this.element.animate({bottom: 'auto', top: $target}, {duration: 1000 * $correction, complete: function () {
-                        that.stop();
-                    }});
+                $topEdge = 0
+                if ($target >= $topEdge) {
+                    this.state = "movingUp";
+                    this.element.removeClass("stopped").addClass("movingUp");
+                    $correction = $distance / this.speed;
+                    that = this;
+                    this.element.animate({bottom: 'auto', top: $target}, {duration: 1000 * $correction, complete: function () {
+                            that.stop();
+                        }});
+                }
+
+
 
             },
             moveDown: function () {
-                this.state = "movingDown";
-                this.element.removeClass("stopped").addClass("movingDown");
-                $distance = this.element.height() + this.treshould;                
+
+                $distance = this.element.height() + this.treshould;
                 $target = parseInt(this.element.css("top")) + $distance;
-                $correction = $distance / this.speed;
-                that = this;
-                this.element.animate({bottom: 'auto', top: $target}, {duration: 1000 * $correction, complete: function () {
-                        that.stop();
-                    }});
+                $bottomEdge = this.shaft.height() - this.element.height();
+                if ($target < $bottomEdge) {
+                    this.state = "movingDown";
+                    this.element.removeClass("stopped").addClass("movingDown");
+                    $correction = $distance / this.speed;
+                    that = this;
+                    this.element.animate({bottom: 'auto', top: $target}, {duration: 1000 * $correction, complete: function () {
+                            that.stop();
+                        }});
+                }
+
             },
             stop: function () {
                 this.state = "stopped";
@@ -60,10 +76,10 @@
             $elevatorUp = $elevator.getUp();
 
             if ($elevator.state === "stopped") {
-                if ($windowDown < $elevatorUp) {
+                if ($windowDown < $elevatorUp + 0.7*$elevator.element.height()) {
                     $elevator.moveUp();
                 }
-                if ($windowUp > $elevatorDown) {
+                if ($windowUp > $elevatorDown - 0.7*$elevator.element.height()) {
                     $elevator.moveDown();
                 }
             }
@@ -72,6 +88,12 @@
         $(window).on('scroll', function () {
             update($elevator, $window);
         });
+
+
+
+
+
+
     });
 
 }(jQuery));
