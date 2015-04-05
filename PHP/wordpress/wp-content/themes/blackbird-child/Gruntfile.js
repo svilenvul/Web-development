@@ -92,8 +92,7 @@ module.exports = function (grunt) {
             files: {
                 src: 'D:/GitHub/Web-development/PHP/wordpress/wp-content/themes/blackbird-child/**/*.php'
             }
-        }
-        ,
+        },
         db_dump : {
             local: {
                 options: {
@@ -104,13 +103,42 @@ module.exports = function (grunt) {
                     pass: '',
                     host: '127.0.0.1',
                     
-                    backup_to:'C:/Users/888/Google Диск/Asansiori/archives/'
+                    backup_to:'C:/Users/888/Google Диск/Asansiori/archives/db/test0504.sql'
                 }
             } 
+        },
+        gitadd: {
+            task: {
+                options:{
+                    all: true
+                },
+                files: {
+                    src:['../../../../']
+                }
+            }
+        },
+        gitcommit: {
+            svilenvul: {
+                options: {
+                    message:'grunt commit'
+                },
+                files: {
+                    src:['../../../../']
+                }
+            }
+        },
+        gitpush: {
+           svilenvul: {
+               options: {
+                   remote:'origin',
+                   branch:'elevator'
+               }
+           } 
         }
     });
 
     //Load plugins
+    grunt.loadNpmTasks('grunt-mysql-dump');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -120,7 +148,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-html-validation');
-    grunt.loadNpmTasks('grunt-mysgl-dump');
+    grunt.loadNpmTasks('grunt-git');
+    
     //Register tasks
     grunt.registerTask('server', [
         'shell:xampp',
