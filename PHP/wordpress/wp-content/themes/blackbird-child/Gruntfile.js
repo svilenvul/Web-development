@@ -113,7 +113,7 @@ module.exports = function (grunt) {
                     all: true
                 },
                 files: {
-                    src:['../../../']
+                    src:['../../../../']
                 }
             }
         },
@@ -123,7 +123,7 @@ module.exports = function (grunt) {
                     message:'grunt commit'
                 },
                 files: {
-                    src:['../../../']
+                    src:['../../../../']
                 }
             }
         },
