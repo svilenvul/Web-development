@@ -3,10 +3,10 @@
 function blackbird_child_edit_stylesheet() {
     if (!is_admin()) {
         wp_dequeue_style('blackbird_stylesheet', get_template_directory_uri() . "/style.css", '', '', 'all');
-        wp_enqueue_style('parent-style', get_stylesheet_directory_uri() . '/css/style_parent.css');
-        wp_enqueue_style('960.js', get_stylesheet_directory_uri() . '/css/960_24_col_responsive.css');
+        wp_enqueue_style('parent-style', get_stylesheet_directory_uri() . '/css/output.min.css');
+        /*wp_enqueue_style('960.js', get_stylesheet_directory_uri() . '/css/960_24_col_responsive.css');
         wp_enqueue_style('reset', get_stylesheet_directory_uri() . '/css/reset.css');
-        wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/style.css', array('parent-style', 'reset', '960.js'));
+        wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/style.css', array('parent-style', 'reset', '960.js'));*/
     }
 }
 
