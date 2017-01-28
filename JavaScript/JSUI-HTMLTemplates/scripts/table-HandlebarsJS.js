@@ -1,21 +1,21 @@
 var courses = [{
-		title : "javaScrpt basics",
+		title : "javaScript basics",
 		startDate : "23.03.2014",
 		endDate : "12.04.2014"
 	}, {
-		title : "javaScrpt ui",
+		title : "javaScript ui",
 		startDate : "23.03.2014",
 		endDate : "12.04.2014"
 	}, {
-		title : "javaScrpt applications",
+		title : "javaScript applications",
 		startDate : "23.04.2014",
 		endDate : "12.05.2014"
 	}, {
-		title : "javaScrpt oop",
+		title : "javaScript oop",
 		startDate : "23.05.2014",
 		endDate : "12.06.2014"
 	}, {
-		title : "javaScrpt advanced",
+		title : "javaScript advanced",
 		startDate : "23.06.2014",
 		endDate : "12.07.2014"
 	},
